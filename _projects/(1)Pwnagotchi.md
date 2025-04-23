@@ -1,6 +1,9 @@
 ---
-title: Pwnagotchi
-published: true
+ name: Pwnagotchi
+ tools: [Rasberry Pico 2W, Tool2]
+ image: image url or path here.
+ description: Write project description here.
+ published: true
 ---
 <img src="https://raw.githubusercontent.com/MrP-cpu/MrP-cpu.github.io/main/assets/images/pwnagotchi.gif" alt="Cyber GIF" width="140">
 
