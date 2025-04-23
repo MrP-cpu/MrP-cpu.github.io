@@ -1,7 +1,0 @@
-- name: Adobe Premiere Pro
-  percentage: 95
-  color: info
-
-- name: Adobe After Effects
-  percentage: 90
-  color: success
