@@ -1,7 +1,7 @@
-- name: Adobe Photoshop
+- name: Adobe Premiere Pro
   percentage: 95
   color: info
 
-- name: Adobe Illustrator
+- name: Adobe After Effects
   percentage: 90
   color: success
