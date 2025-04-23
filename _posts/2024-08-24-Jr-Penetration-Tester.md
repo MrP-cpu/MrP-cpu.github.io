@@ -1226,6 +1226,14 @@ pattern_offset. We will cover msfvenom within this module, but pattern_create an
 This room will cover the main components of Metasploit while providing you with a solid foundation on how to find relevant exploits, set parameters, and exploit vulnerable services on the target system. Once you have completed this room, you will be able to navigate and use the Metasploit command line comfortably.
 
 
+- To open the Metasploit we are going to use `Kali Linux`
+    - Open terminal and type `msfconsole`
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/MrP-cpu/Mrp-cpu.github.io/main/assets/Jr_Penetration/msfconsole.jpg" alt="Parts diagram" style="max-width:100%; height:auto;">
+  <p><em style="color: gray;">Console img</em></p>
+</div>
+
 
 <script>
 function copyToClipboard(btn) {
