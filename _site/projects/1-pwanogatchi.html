@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+<!--
+  portfolYOU Jekyll theme by yousinix
+  Free for personal and commercial use under the MIT license
+  https://github.com/yousinix/portfolYOU
+-->
+
+<html lang="en" class="h-100">
+
+<head>
+
+  
+  
+  
+
+  
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Awesome Project">
+  <meta property="og:description" content="Write project description here.">
+  <meta property="og:image" content="image url or path here">
+
+  <title>Awesome Project</title>
+  <meta name="description" content="Write project description here.">
+
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
+
+  <!-- Theme style -->
+  <script src="/assets/js/theme.js"></script>
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+
+  <!-- Animate CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+
+<body class="h-100 d-flex flex-column">
+
+  <main class="flex-shrink-0 container mt-5">
+    <nav class="navbar navbar-expand-lg navbar-themed">
+
+  <a class="navbar-brand" href="/"><h5><b>MrP-CPU</b></h5></a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fas fa-1x fa-bars text-themed"></i>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav ml-auto"><a class="nav-item nav-link active" href="/projects/">Projects</a>
+
+      <a class="nav-item nav-link " href="/blog/">Blog</a>
+
+      <a class="nav-item nav-link " href="/about/">About</a>
+
+      
+
+      <span id="theme-toggler" class="nav-item nav-link" role="button" onclick="toggleTheme()"></span>
+    </div>
+  </div>
+
+</nav>
+    <div class="col-lg-10 mx-auto mt-5 markdown-body">
+  <p><img src="https://raw.githubusercontent.com/MrP-cpu/MrP-cpu.github.io/main/assets/images/pwnagotchi.gif" alt="Cyber GIF" width="140" /></p>
+
+<p><img src="https://github.com/MrP-cpu/MrP-cpu.github.io/blob/main/assets/pwnagotchi_2.gif" alt="newCyberGif" width="140" allign="left" /></p>
+
+<h1 id="understanding-pwnagotchi">Understanding Pwnagotchi</h1>
+
+<p><a href="https://twitter.com/pwnagotchi">Pwnagotchi</a> is an <a href="https://hackernoon.com/intuitive-rl-intro-to-advantage-actor-critic-a2c-4ff545978752">A2C</a>-based “AI” powered by <a href="https://www.bettercap.org/">bettercap</a> and running on a <a href="https://www.raspberrypi.org/products/raspberry-pi-zero-w/">Raspberry Pi Zero W</a> that learns from its surrounding WiFi environment in order to maximize the <a href="https://pwnagotchi.ai/intro/#wifi-handshakes-101">crackable WPA key material it captures</a> (either through passive sniffing or by performing deauthentication and association attacks). This material is collected on disk as PCAP files containing any form of handshake supported by <a href="https://hashcat.net/hashcat/">hashcat</a>, including full and half WPA handshakes as well as <a href="https://www.evilsocket.net/2019/02/13/Pwning-WiFi-networks-with-bettercap-and-the-PMKID-client-less-attack/">PMKIDs</a>.</p>
+
+<p>Inspired from : 
+                <a href="https://pwnagotchi.ai">Main Website</a>
+                <a href="https://pwnagotchi.org">Unofficial Website</a></p>
+
+<hr />
+
+<p>To <strong>understand</strong> the Pwnagotchi tool, there are two main components:</p>
+
+<h2 id="1-hardware-part">1. Hardware Part</h2>
+
+<p>This includes the physical setup required to run Pwnagotchi:</p>
+
+<ul>
+  <li><strong>Raspberry Pi Zero W</strong>: A small, power-efficient single-board computer that acts as the brain of the Pwnagotchi. It has built-in WiFi, which is essential for scanning and capturing WiFi handshakes.</li>
+</ul>
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/MrP-cpu/MrP-cpu.github.io/main/assets/images/zero2W.jpg" alt="Parts diagram" style="max-width:100%; height:auto;" />
+  <p><em style="color: gray;">Raspberry Pi Zero W</em></p>
+</div>
+
+<ul>
+  <li><strong>LCD Display (e.g., Waveshare 2.13 e-Ink Paper HAT+ Display)</strong>: This is used to display real-time status updates such as the number of handshakes captured, WiFi networks in range, current mood of the Pwnagotchi (based on its reinforcement learning performance), and connectivity stats. It’s a cool visual representation that makes the device look like a Tamagotchi.</li>
+</ul>
+
+<div align="center" id="carousel" style="position: relative; width: 100%; max-width: 600px; margin: auto;">
+  <img src="https://raw.githubusercontent.com/MrP-cpu/MrP-cpu.github.io/main/assets/Waveshare_front.jpg" class="carousel-img" style="width: 100%; display: block;" />
+  <img src="https://raw.githubusercontent.com/MrP-cpu/MrP-cpu.github.io/main/assets/Waveshare_back.jpg" class="carousel-img" style="width: 100%; display: none;" />
+  <p><em style="color: gray;">Waveshare Display</em></p>
+
+  <button onclick="plusSlides(-1)" style="position: absolute; top: 50%; left: 0; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; padding: 10px;">❮</button>
+  <button onclick="plusSlides(1)" style="position: absolute; top: 50%; right: 0; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; padding: 10px;">❯</button>
+</div>
+
+<script>
+  let slideIndex = 0;
+  const slides = document.getElementsByClassName("carousel-img");
+  showSlide(slideIndex);
+
+  function plusSlides(n) {
+    showSlide(slideIndex += n);
+  }
+
+  function showSlide(n) {
+    if (n >= slides.length) slideIndex = 0;
+    if (n < 0) slideIndex = slides.length - 1;
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slides[slideIndex].style.display = "block";
+  }
+</script>
+
+<p>So lets see the specifications of the display , we can see into the main website of the waveshare about this -&gt;</p>
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/MrP-cpu/MrP-cpu.github.io/main/assets/images/specifications_waveshare.jpg" alt="Parts diagram" style="max-width:100%; height:auto;" />
+  <p><em style="color: gray;">Waveshare 2.13 e-Ink Paper HAT+ Display</em></p>
+</div>
+
+<ul>
+  <li>
+    <p><strong>Battery Pack</strong>: To make the setup portable and enable long-term passive sniffing, a USB power bank is typically used.</p>
+  </li>
+  <li>
+    <p><strong>Optional Accessories</strong>:</p>
+    <ul>
+      <li><strong>MicroSD card</strong> (for storing OS and captured data)</li>
+      <li><strong>Protective case</strong></li>
+      <li><strong>External WiFi adapter</strong> (if using devices other than Pi Zero W for better performance or signal strength)</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<h2 id="2-software--intelligence-part">2. Software &amp; Intelligence Part</h2>
+<div align="center">
+  <img src="https://raw.githubusercontent.com/MrP-cpu/MrP-cpu.github.io/main/assets/c7xh4hN.png" alt="Parts diagram" style="width: 70%; height: auto;" />
+  <p><em style="color: gray;">Components on the display</em></p>
+</div>
+
+<p>This part focuses on the AI-driven functionality and software tools used:</p>
+
+<ul>
+  <li>
+    <p><strong>Pwnagotchi OS</strong>: A custom image based on Raspbian that runs the entire framework. It includes all the necessary tools and scripts to capture WiFi handshakes.</p>
+  </li>
+  <li>
+    <p><strong>Bettercap</strong>: The underlying packet manipulation and network monitoring tool that Pwnagotchi uses to scan for WiFi networks, sniff traffic, perform deauthentication attacks, and capture WPA handshakes or PMKIDs.</p>
+  </li>
+  <li>
+    <p><strong>A2C (Advantage Actor-Critic) Reinforcement Learning</strong>: This is the AI model that allows the Pwnagotchi to “learn” from its environment. Based on feedback (reward signals) like successful handshake captures or efficient scanning, the model adjusts its behavior to optimize future performance. This makes it smarter over time.</p>
+  </li>
+  <li>
+    <p><strong>PCAP File Collection</strong>: The captured handshakes are stored in <code class="language-plaintext highlighter-rouge">.pcap</code> format, which can later be used with offline password-cracking tools like Hashcat or Aircrack-ng to recover WiFi passwords.</p>
+  </li>
+  <li>
+    <p><strong>Plugins and Community Features</strong>: Pwnagotchi supports plugins for GPS integration, mesh networking with other Pwnagotchis, web UI access, and more.</p>
+  </li>
+</ul>
+
+<hr />
+
+<p>Together, the <strong>hardware</strong> gives Pwnagotchi its body, and the <strong>software with AI</strong> gives it a brain and personality. It passively or actively interacts with its wireless environment to collect useful data for WiFi security research and penetration testing.</p>
+
+</div>
+  </main>
+  <footer class="mt-auto py-3 text-center">
+
+  <small class="text-muted mb-2">
+    <i class="fas fa-code"></i> with <i class="fas fa-heart"></i>
+    by <strong>MrP</strong>
+  </small>
+
+  <div class="container-fluid justify-content-center"><a class="social mx-1"  href="https://www.behance.net/your_username"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#1769ff'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-behance fa-1x"></i>
+    </a><a class="social mx-1"  href="mailto:username@domain.com"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#db4437'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fas fa-envelope fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.facebook.com/your_username"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#3b5998'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-facebook fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.github.com/Mrp-cpu"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#333333'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-github fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.linkedin.com/in/your_username"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#007bb5'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-linkedin-in fa-1x"></i>
+    </a><a class="social mx-1"  href="https://medium.com/@your_username"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#00ab6c'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-medium fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.twitter.com/your_username"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#1da1f2'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-twitter fa-1x"></i>
+    </a>
+
+</div><small id="attribution">
+    theme <a href="https://github.com/yousinix/portfolYOU">portfolYOU</a>
+  </small>
+
+</footer>
+
+  
+  <!-- GitHub Buttons -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper.js CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+<!-- Bootstrap JS CDN -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- wow.js CDN & Activation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+<script> new WOW().init(); </script>
+
+<!-- Initialize all tooltips -->
+<script>
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+</body>
+
+</html>
