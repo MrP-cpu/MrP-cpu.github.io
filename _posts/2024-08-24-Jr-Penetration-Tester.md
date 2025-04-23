@@ -1,6 +1,7 @@
 ---
-title: Jr Penetration Tester
-published: false
+title: Jr Penetratino Tester
+published: true
+tags: [cyber , Penetration Testing , Red Teaming]
 ---
 
 

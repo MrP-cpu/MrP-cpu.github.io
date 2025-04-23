@@ -6,6 +6,14 @@
       "tags"     : "cyber, search engines",
       "url"      : "/blog/Search-Engines",
       "date"     : "2025-04-10 00:00:00 +0530"
+    } ,
+  
+    {
+      "title"    : "Jr Penetratino Tester",
+      "category" : "",
+      "tags"     : "cyber, Penetration Testing, Red Teaming",
+      "url"      : "/blog/Jr-Penetration-Tester",
+      "date"     : "2024-08-24 00:00:00 +0530"
     } 
   
 ]

