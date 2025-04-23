@@ -216,23 +216,33 @@ The tester will have **full** knowledge of the application and its expected be
 
   
 #### Practical: ACME Penetration Test
-![[Pasted image 20241103232147.png]]
-
-![[Pasted image 20241103232200.png]]
 
 
-![[Pasted image 20241103232214.png]]
+<div align="center">
+  <img src="https://raw.githubusercontent.com/MrP-cpu/MrP-cpu.github.io/main/assets/Jr_Penetration/20241103232147.png" alt="Parts diagram" style="max-width:100%; height:auto;">
+  <p><em style="color: gray;"></em></p>
+</div>
 
-![[Pasted image 20241103232256.png]]
+<div align="center">
+  <img src="https://raw.githubusercontent.com/MrP-cpu/MrP-cpu.github.io/main/assets/Jr_Penetration/20241103232200.png" alt="Parts diagram" style="max-width:100%; height:auto;">
+  <p><em style="color: gray;"></em></p>
+</div>
 
-![[Pasted image 20241103232304.png]]
 
-![[Pasted image 20241103232317.png]]
+![](https://raw.githubusercontent.com/MrP-cpu/MrP-cpu.github.io/main/assets/Jr_Penetration/20241103232214.png)
 
 
-![[Pasted image 20241103232334.png]]
 
-![[Pasted image 20241103232349.png]]
+![](https://raw.githubusercontent.com/MrP-cpu/MrP-cpu.github.io/main/assets/Jr_Penetration/20241103232256.png)
+
+![](https://raw.githubusercontent.com/MrP-cpu/MrP-cpu.github.io/main/assets/Jr_Penetration/20241103232304.png)
+
+![](https://raw.githubusercontent.com/MrP-cpu/MrP-cpu.github.io/main/assets/Jr_Penetration/20241103232317.png)
+
+
+![](https://raw.githubusercontent.com/MrP-cpu/MrP-cpu.github.io/main/assets/Jr_Penetration/20241103232334.png)
+
+![](https://raw.githubusercontent.com/MrP-cpu/MrP-cpu.github.io/main/assets/Jr_Penetration/20241103232349.png)
 
 
 ---
@@ -246,7 +256,8 @@ Learn the principles of information security that secures data and protects syst
 - information security model that is used to consideration thoroughout creating a security policy .
 - **C**onfidentiality, **I**ntegrity and **A**vailability (**CIA**), this model has quickly become an industry standard today. This model should help determine the value of data that it applies to, and in turn, the attention it needs from the business.
 
-![[Pasted image 20241104024850.png]]
+![](https://raw.githubusercontent.com/MrP-cpu/MrP-cpu.github.io/main/assets/Jr_Penetration/20241104024850.png)
+
 **Confidentiality**
 
 This element is the protection of data from unauthorized access and misuse. Organisations will always have some form of sensitive data stored on their systems. To provide confidentiality is to protect this data from parties that it is not intended for.
@@ -315,6 +326,8 @@ What is essential when discussing privilege and access controls is the principle
   
 
 As we previously mentioned, PAM incorporates more than assigning access. It also encompasses enforcing security policies such as password management, auditing policies and reducing the attack surface a system faces.
+
+<br><br>
 
 #### Security Models Continued
 
