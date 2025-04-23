@@ -1,7 +1,7 @@
 ---
 name: Pwanogatchi
 tools: [Rasberry Pi 2, Waveshare]
-image: image url or path here
+image: https://raw.githubusercontent.com/MrP-cpu/Mrp-cpu.github.io/main/assets/projects/pwanogatchi.jpeg
 description: Pwnagotchi is an open-source AI-powered tool designed for Wi-Fi network auditing. It’s a play on the Tamagotchi concept, where instead of taking care of a digital pet, you "train" a small AI agent that learns how to capture Wi-Fi handshakes passively to help in penetration testing.
 ---
 
