@@ -26,7 +26,7 @@ nav_exclude:                                            # The following paths ar
 author:
   name              : MrP
   image             : 
-  behance           : your_username
+  #behance           : your_username
 # dribbble          : your_username
 #email             : username@domain.com
  # facebook          : your_username
@@ -34,8 +34,8 @@ author:
 # gitlab            : your_username
 # instagram         : your_username
 # kaggle            : your_username
-  linkedin          : your_username
-  medium            : your_username
+  #linkedin          : your_username
+  #medium            : your_username
 # soundcloud        : your_username
 # spotify           : your_username
 # stackoverflow     : your_user_id
