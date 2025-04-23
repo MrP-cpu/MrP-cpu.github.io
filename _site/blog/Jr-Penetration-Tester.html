@@ -726,13 +726,13 @@ Get hands-on, learn about and exploit some of the most popular web application v
   <p>In this module you will learn about the most common web application vulnerabilities, understanding what makes it vulnerable and putting theory into practice by hacking website simulations. You will also be taught how to identify, exploit and prevent each vulnerability.</p>
 </blockquote>
 
-<p>![[Pasted image 20241104032305.png]]</p>
+<p><img src="https://raw.githubusercontent.com/MrP-cpu/Mrp-cpu.github.io/main/assets/Jr_Penetration/20241104032305.png" alt="" /></p>
 
 <h3 id="walking-an-application">Walking An Application</h3>
 
 <p><em>Manually review a web application for security issues using only your browsers developer tools. Hacking with just your browser, no tools or scripts.</em></p>
 
-<p>![[Pasted image 20241104033253.png]]</p>
+<p><img src="https://raw.githubusercontent.com/MrP-cpu/Mrp-cpu.github.io/main/assets/Jr_Penetration/20241104033253.png" alt="" /></p>
 
 <h4 id="exploring-the-website">Exploring The Website</h4>
 
@@ -828,11 +828,11 @@ Get hands-on, learn about and exploit some of the most popular web application v
   <li>returned code is made up of HTML ( HyperText Markup Language), CSS ( Cascading Style Sheets ) and JavaScript, and it’s what tells our browser what content to display, how to show it and adds an element of interactivity with JavaScript.</li>
 </ul>
 
-<p>![[Pasted image 20241104041913.png]]</p>
+<p><img src="https://raw.githubusercontent.com/MrP-cpu/Mrp-cpu.github.io/main/assets/Jr_Penetration/20241104041913.png" alt="" /></p>
 
-<p>![[Pasted image 20241104041656.png]]</p>
+<p><img src="https://raw.githubusercontent.com/MrP-cpu/Mrp-cpu.github.io/main/assets/Jr_Penetration/20241104041656.png" alt="" /></p>
 
-<p>![[Pasted image 20241104155020.png]]</p>
+<p><img src="https://raw.githubusercontent.com/MrP-cpu/Mrp-cpu.github.io/main/assets/Jr_Penetration/20241104155020.png" alt="" /></p>
 
 <p>for directory listing flag -&gt; for that there is a /assets for there we are able to get the</p>
 
@@ -864,7 +864,7 @@ Get hands-on, learn about and exploit some of the most popular web application v
 
 <p>Locate the <code class="language-plaintext highlighter-rouge">DIV</code> element with the class <code class="language-plaintext highlighter-rouge">premium-customer-blocker</code> and click on it. You’ll see all the CSS styles in the styles box that apply to this element, such as <code class="language-plaintext highlighter-rouge">margin-top: 60px</code> and <code class="language-plaintext highlighter-rouge">text-align: center</code>. The style we’re interested in is the <code class="language-plaintext highlighter-rouge">display: block</code>. If you click on the word <code class="language-plaintext highlighter-rouge">block</code>, you can type a value of your own choice. Try typing <code class="language-plaintext highlighter-rouge">none</code>, and this will make the box disappear, revealing the content underneath it and a flag. If the element didn’t have a display field, you could click below the last style and add in your own. Have a play with the element inspector, and you’ll see you can change any of the information on the website, including the content. Remember this is only edited on your browser window, and when you press refresh, everything will be back to normal.</p>
 
-<p>![[Pasted image 20241105002112.png]]</p>
+<p><img src="https://raw.githubusercontent.com/MrP-cpu/Mrp-cpu.github.io/main/assets/Jr_Penetration/20241105002112.png" alt="" /></p>
 
 <h4 id="developer-tools---debugger">Developer Tools - Debugger</h4>
 
@@ -872,7 +872,7 @@ Get hands-on, learn about and exploit some of the most popular web application v
 
 <p>so i noticed something related to the <code class="language-plaintext highlighter-rouge">contact</code> section , then we could view the source code , and in the <code class="language-plaintext highlighter-rouge">sources</code> section we could see that there is a <code class="language-plaintext highlighter-rouge">flash.min.js</code> and there is a function named <code class="language-plaintext highlighter-rouge">flash</code> and clicking that will inovke the</p>
 
-<p>![[Pasted image 20241106151409.png]]</p>
+<p><img src="https://raw.githubusercontent.com/MrP-cpu/Mrp-cpu.github.io/main/assets/Jr_Penetration/20241106151409.png" alt="" /></p>
 
 <p>This panel in the developer tools is intended for debugging JavaScript, and again is an excellent feature for web developers wanting to work out why something might not be working. But as penetration testers, it gives us the option of digging deep into the JavaScript code. In Firefox and Safari, this feature is called Debugger, but in Google Chrome, it’s called Sources.</p>
 
@@ -890,8 +890,9 @@ Get hands-on, learn about and exploit some of the most popular web application v
 
 <p>This little bit of JavaScript is what is removing the red popup from the page. We can utilise another feature of debugger called <strong>breakpoints</strong>. These are points in the code that we can force the browser to stop processing the JavaScript and pause the current execution.</p>
 
-<p>If you click the line number that contains the above code, you’ll notice it turns blue; you’ve now inserted a breakpoint on this line. Now try refreshing the page, and you’ll notice the red box stays on the page instead of disappearing, and it contains a flag
-![[Pasted image 20241106151327.png]]</p>
+<p>If you click the line number that contains the above code, you’ll notice it turns blue; you’ve now inserted a breakpoint on this line. Now try refreshing the page, and you’ll notice the red box stays on the page instead of disappearing, and it contains a flag</p>
+
+<p><img src="https://raw.githubusercontent.com/MrP-cpu/Mrp-cpu.github.io/main/assets/Jr_Penetration/20241106151327.png" alt="" /></p>
 
 <h4 id="developer-tools---network">Developer Tools - Network</h4>
 
@@ -903,25 +904,13 @@ Get hands-on, learn about and exploit some of the most popular web application v
 
 <p><img src="https://tryhackme-images.s3.amazonaws.com/user-uploads/5efe36fb68daf465530ca761/room-content/9ec0890f159397547950ea1822994443.png" alt="" /></p>
 
-<table>
-  <tbody>
-    <tr>
-      <td>![[Pasted image 20241106152352.png</td>
-      <td>Examine the new entry on the network tab that the contact form created and view the page the data was sent to in order to reveal a flag.]]</td>
-    </tr>
-  </tbody>
-</table>
+<p><img src="https://raw.githubusercontent.com/MrP-cpu/Mrp-cpu.github.io/main/assets/Jr_Penetration/20241106152352.png" alt="" />
+<em>Examine the new entry on the network tab that the contact form created and view the page the data was sent to in order to reveal a flag</em></p>
 
-<p>![[Pasted image 20241106152110.png]]</p>
+<p><img src="https://raw.githubusercontent.com/MrP-cpu/Mrp-cpu.github.io/main/assets/Jr_Penetration/20241106152110.png" alt="" /></p>
 
-<table>
-  <tbody>
-    <tr>
-      <td>![[Pasted image 20241106152520.png</td>
-      <td>the flag we found in the preview section when we passed our values through the form and then there a section got created named]]</td>
-    </tr>
-  </tbody>
-</table>
+<p><img src="https://raw.githubusercontent.com/MrP-cpu/Mrp-cpu.github.io/main/assets/Jr_Penetration/20241106152520.png" alt="" />
+<em>the flag we found in the preview section when we passed our values through the form and then there a section got created named</em></p>
 
 <hr />
 
@@ -938,7 +927,7 @@ Get hands-on, learn about and exploit some of the most popular web application v
 
 <ul>
   <li>while pinging the target we could understand about the target which is active now -&gt; <code class="language-plaintext highlighter-rouge">ping 10.10.91.5</code></li>
-  <li>![[Pasted image 20241107115056.png]]</li>
+  <li>![](https://raw.githubusercontent.com/MrP-cpu/Mrp-cpu.github.io/main/assets/Jr_Penetration/20241107115056.png]]</li>
   <li>now lets move to the next topics -&gt;</li>
 </ul>
 
@@ -1136,7 +1125,7 @@ Try running the below curl command against the web server, where the <strong>-v
 
 <p>there is some clipboard added</p>
 
-<p>![[Pasted image 20241108125712.png]]</p>
+<p><a href="https://raw.githubusercontent.com/MrP-cpu/Mrp-cpu.github.io/main/assets/Jr_Penetration/20241108125712.png"></a></p>
 
 <h3 id="subdomain-enumeration">Subdomain Enumeration</h3>
 
@@ -1154,7 +1143,7 @@ Try running the below curl command against the web server, where the <strong>-v
 
 <p>Go to <a href="https://crt.sh/">crt.sh</a> and search for the domain name <strong>tryhackme.com</strong>, find the entry that was logged at <strong>2020-12-26</strong> and enter the domain below to answer the question.</p>
 
-<p>![[Pasted image 20241108131509.png]]</p>
+<p><img src="https://raw.githubusercontent.com/MrP-cpu/Mrp-cpu.github.io/main/assets/Jr_Penetration/20241108131509.png" alt="" /></p>
 
 <h4 id="osint---search-engines">OSINT - Search Engines</h4>
 <p><strong>Search Engines</strong></p>
@@ -1163,13 +1152,13 @@ Try running the below curl command against the web server, where the <strong>-v
 
 <p>Go to <a href="https://www.google.com/">Google</a> and use the search term <code class="language-plaintext highlighter-rouge">site:*.tryhackme.com -site:www.tryhackme.com</code>, which should reveal a subdomain for tryhackme.com; use that subdomain to answer the question below.</p>
 
-<p>![[Pasted image 20241108132654.png]]</p>
+<p><img src="https://raw.githubusercontent.com/MrP-cpu/Mrp-cpu.github.io/main/assets/Jr_Penetration/20241108132654.png" alt="" /></p>
 
 <h4 id="dns-bruteforce">DNS Bruteforce</h4>
 
 <p>Bruteforce DNS (Domain Name System) enumeration is the method of trying tens, hundreds, thousands or even millions of different possible subdomains from a pre-defined list of commonly used subdomains. Because this method requires many requests, we automate it with tools to make the process quicker. In this instance, we are using a tool called dnsrecon to perform this. Click the “View Site” button to open the static site, press the “Run DNSrecon Request” button to start the simulation, and then answer the question below.</p>
 
-<p>![[Pasted image 20241108133022.png]]</p>
+<p><img src="https://raw.githubusercontent.com/MrP-cpu/Mrp-cpu.github.io/main/assets/Jr_Penetration/20241108133022.png" alt="" /></p>
 
 <h4 id="osint---sublist3r">OSINT - Sublist3r</h4>
 
@@ -1179,7 +1168,8 @@ Try running the below curl command against the web server, where the <strong>-v
 
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>user@thm:~<span class="nv">$ </span>./sublist3r.py <span class="nt">-d</span> acmeitsupport.thm
 </code></pre></div></div>
-<p>![[Pasted image 20241108133151.png]]</p>
+
+<p><img src="https://raw.githubusercontent.com/MrP-cpu/Mrp-cpu.github.io/main/assets/Jr_Penetration/20241108133151.png" alt="" /></p>
 
 <h4 id="virtual-hosts">Virtual Hosts</h4>
 
@@ -1258,7 +1248,7 @@ Try running the below curl command against the web server, where the <strong>-v
   </tbody>
 </table>
 
-<p>![[Pasted image 20241109114931.png]]</p>
+<p><img src="https://raw.githubusercontent.com/MrP-cpu/Mrp-cpu.github.io/main/assets/Jr_Penetration/20241109114931.png" alt="" /></p>
 
 <table>
   <tbody>
@@ -1282,16 +1272,10 @@ Try running the below curl command against the web server, where the <strong>-v
 <span class="p">}</span>
 </code></pre></div></div>
 
-<p>![[Pasted image 20241110173333.png]]</p>
+<p><img src="https://raw.githubusercontent.com/MrP-cpu/Mrp-cpu.github.io/main/assets/Jr_Penetration/20241110173333.png" alt="" /></p>
 
-<table>
-  <tbody>
-    <tr>
-      <td>![[Pasted image 20241110173346.png</td>
-      <td>by seing this we could understand that the <em>robert</em> is a valid username with a useremail as robert@acmeitsupport.thm]]</td>
-    </tr>
-  </tbody>
-</table>
+<p><img src="https://raw.githubusercontent.com/MrP-cpu/Mrp-cpu.github.io/main/assets/Jr_Penetration/20241110173346.png" alt="" />
+ <em>by seing this we could understand that the *robert</em> is a valid username with a useremail as robert@acmeitsupport.thm*</p>
 
 <p>At this stage, you may be wondering what the vulnerability could be in this application as you have to know both the email and username and then the password link is sent to the email address of the account owner.</p>
 
@@ -1354,8 +1338,9 @@ Page Generated in 0.05322 Seconds using the THM Framework v1.2 ( https://static-
 
 </span></code></pre></div></div>
 
-<p>![[Pasted image 20241112092245.png]]
-We use the <code class="language-plaintext highlighter-rouge">-H</code> flag to add an additional header to the request. In this instance, we are setting the <code class="language-plaintext highlighter-rouge">Content-Type</code> to <code class="language-plaintext highlighter-rouge">application/x-www-form-urlencoded</code>, which lets the web server know we are sending form data so it properly understands our request.</p>
+<p><img src="https://raw.githubusercontent.com/MrP-cpu/Mrp-cpu.github.io/main/assets/Jr_Penetration/20241112092135.png" alt="" /></p>
+
+<p>We use the <code class="language-plaintext highlighter-rouge">-H</code> flag to add an additional header to the request. In this instance, we are setting the <code class="language-plaintext highlighter-rouge">Content-Type</code> to <code class="language-plaintext highlighter-rouge">application/x-www-form-urlencoded</code>, which lets the web server know we are sending form data so it properly understands our request.</p>
 
 <p>In the application, the user account is retrieved using the query string, but later on, in the application logic, the password reset email is sent using the data found in the PHP variable <code class="language-plaintext highlighter-rouge">$_REQUEST</code>. </p>
 
@@ -1364,7 +1349,7 @@ We use the <code class="language-plaintext highlighter-rouge">-H</code> flag t
 <div class="language-shell-session highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">user@tryhackme$</span><span class="w"> </span>curl <span class="s1">'http://10.10.241.173/customers/reset?email=robert%40acmeitsupport.thm'</span> <span class="nt">-H</span> <span class="s1">'Content-Type: application/x-www-form-urlencoded'</span> <span class="nt">-d</span> <span class="s1">'username=robert&amp;email=attacker@hacker.com'</span>
 </code></pre></div></div>
 
-<p>![[Pasted image 20241112092135.png]]</p>
+<p><img src="https://raw.githubusercontent.com/MrP-cpu/Mrp-cpu.github.io/main/assets/Jr_Penetration/20241112092135.png" alt="" /></p>
 
 <p>so we could see that the vulnerablility allows us to login to any other user id and in the same way we could build our profile and then pass the email of ours and send a POST request to the user and raise a ticket for login of robert</p>
 
@@ -1423,44 +1408,29 @@ Page Generated in 0.03316 Seconds using the THM Framework v1.2 ( https://static-
 
 </span></code></pre></div></div>
 
-<p>![[Pasted image 20241112093449.png]]</p>
+<p><img src="https://raw.githubusercontent.com/MrP-cpu/Mrp-cpu.github.io/main/assets/Jr_Penetration/20241112093449.png" alt="" />
+<em>image from the tryhackme</em></p>
 
-<table>
-  <tbody>
-    <tr>
-      <td>![[Pasted image 20241112093551.png</td>
-      <td>the support ticket that has been generated by us to our fake user ]]</td>
-    </tr>
-  </tbody>
-</table>
+<p><img src="https://raw.githubusercontent.com/MrP-cpu/Mrp-cpu.github.io/main/assets/Jr_Penetration/20241112093551.png" alt="the support ticket that has been generated by us to our fake user " />
+<em>the support ticket that has been generated by us to our fake user</em></p>
 
-<table>
-  <tbody>
-    <tr>
-      <td>![[Pasted image 20241112093653.png</td>
-      <td>the support ticket that has been generated and we are login in]]</td>
-    </tr>
-  </tbody>
-</table>
+<p><img src="https://raw.githubusercontent.com/MrP-cpu/Mrp-cpu.github.io/main/assets/Jr_Penetration/20241112093653.png" alt="Support Ticket Screenshot" /><br />
+<em>Support ticket generated successfully — logging into the system for further diagnostics.</em></p>
 
-<table>
-  <tbody>
-    <tr>
-      <td>![[Pasted image 20241112093813.png</td>
-      <td>now we are into robert’s account]]</td>
-    </tr>
-  </tbody>
-</table>
+<p><img src="https://raw.githubusercontent.com/MrP-cpu/Mrp-cpu.github.io/main/assets/Jr_Penetration/20241112093813.png" alt="" />
+<em>now we are into robert’s account</em></p>
 
 <ul>
   <li>and by opening the new ticket we got the <strong>flag</strong></li>
 </ul>
 
+<p><br /></p>
 <h4 id="cookie-tampering">Cookie Tampering</h4>
 
 <p>Examining and editing the cookies set by the web server during your online session can have multiple outcomes, such as unauthenticated access, access to another user’s account, or elevated privileges. If you need a refresher on cookies, check out the <a href="https://tryhackme.com/room/httpindetail">HTTP In Detail</a> room on task 6.</p>
 
-<p><strong>Plain Text</strong></p>
+<p><br /><br />
+<strong>Plain Text</strong></p>
 
 <p>The contents of some cookies can be in plain text, and it is obvious what they do. Take, for example, if these were the cookie set after a successful login:</p>
 
