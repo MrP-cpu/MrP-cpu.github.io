@@ -107,3 +107,14 @@ exclude:
   - CONTRIBUTING.md
   - LICENSE
   - "*.log"
+
+
+# Existing config...
+
+# Inject your CSS file into the head
+include:
+  - _includes/custom-head.html
+
+# If the theme supports head customization:
+portfolyou:
+  custom_head: custom-head.html
