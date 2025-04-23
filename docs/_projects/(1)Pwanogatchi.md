@@ -1,9 +1,10 @@
 ---
- name: Pwnagotchi
- tools: [Rasberry Pico 2W, Tool2]
- image: image url or path here.
- description: Write project description here.
+name: Awesome Project
+tools: [Tool1, Tool2]
+image: image url or path here
+description: Write project description here.
 ---
+
 <img src="https://raw.githubusercontent.com/MrP-cpu/MrP-cpu.github.io/main/assets/images/pwnagotchi.gif" alt="Cyber GIF" width="140">
 
 <img src="https://github.com/MrP-cpu/MrP-cpu.github.io/blob/main/assets/pwnagotchi_2.gif" alt="newCyberGif" width="140" allign=left>
