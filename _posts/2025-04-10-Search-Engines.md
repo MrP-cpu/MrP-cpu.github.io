@@ -1,6 +1,8 @@
 ---
 title: Awesome Cybersecurity Search Engines
 published: true
+tags: [cyber , search engines]
+description : Some of the most helpful cybersecurity search engines for security professionals...
 ---
 
 
@@ -15,7 +17,7 @@ published: true
 <!-- </div> -->
 
 
-Some of the most *helpful* cybersecurity search engines for security professionals...
+
 
 <a href="https://searchcode.com" target="_blank">SearchCode</a> – Source Code Search Engine  
 SearchCode allows users to search through millions of lines of code in various programming languages.

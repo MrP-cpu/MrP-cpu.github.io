@@ -5,9 +5,9 @@ image: https://raw.githubusercontent.com/MrP-cpu/Mrp-cpu.github.io/main/assets/p
 description: Pwnagotchi is an open-source AI-powered tool designed for Wi-Fi network auditing. It’s a play on the Tamagotchi concept, where instead of taking care of a digital pet, you "train" a small AI agent that learns how to capture Wi-Fi handshakes passively to help in penetration testing.
 ---
 
-<img src="https://raw.githubusercontent.com/MrP-cpu/MrP-cpu.github.io/main/assets/images/pwnagotchi.gif" alt="Cyber GIF" width="140">
+<img src="https://raw.githubusercontent.com/MrP-cpu/MrP-cpu.github.io/main/assets/images/pwnagotchi.gif" alt="Cyber GIF" width="240" align="left">
 
-<img src="https://github.com/MrP-cpu/MrP-cpu.github.io/blob/main/assets/pwnagotchi_2.gif" alt="newCyberGif" width="140" allign=left>
+<br><br>
 
 # Understanding Pwnagotchi
 
