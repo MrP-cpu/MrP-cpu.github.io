@@ -34,34 +34,11 @@ This includes the physical setup required to run Pwnagotchi:
 
 - **LCD Display (e.g., Waveshare 2.13 e-Ink Paper HAT+ Display)**: This is used to display real-time status updates such as the number of handshakes captured, WiFi networks in range, current mood of the Pwnagotchi (based on its reinforcement learning performance), and connectivity stats. It's a cool visual representation that makes the device look like a Tamagotchi.
 
-
-<div align="center" id="carousel" style="position: relative; width: 100%; max-width: 600px; margin: auto;">
-  <img src="https://raw.githubusercontent.com/MrP-cpu/MrP-cpu.github.io/main/assets/Waveshare_front.jpg" class="carousel-img" style="width: 100%; display: block;">
-  <img src="https://raw.githubusercontent.com/MrP-cpu/MrP-cpu.github.io/main/assets/Waveshare_back.jpg" class="carousel-img" style="width: 100%; display: none;">
-  <p><em style="color: gray;">Waveshare Display</em></p>
-
-  <button onclick="plusSlides(-1)" style="position: absolute; top: 50%; left: 0; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; padding: 10px;">❮</button>
-  <button onclick="plusSlides(1)" style="position: absolute; top: 50%; right: 0; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; padding: 10px;">❯</button>
-</div>
-
-<script>
-  let slideIndex = 0;
-  const slides = document.getElementsByClassName("carousel-img");
-  showSlide(slideIndex);
-
-  function plusSlides(n) {
-    showSlide(slideIndex += n);
-  }
-
-  function showSlide(n) {
-    if (n >= slides.length) slideIndex = 0;
-    if (n < 0) slideIndex = slides.length - 1;
-    for (let i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    slides[slideIndex].style.display = "block";
-  }
-</script>
+{% capture carousel_images %}
+https://raw.githubusercontent.com/MrP-cpu/MrP-cpu.github.io/main/assets/Waveshare_front.jpg
+https://raw.githubusercontent.com/MrP-cpu/MrP-cpu.github.io/main/assets/Waveshare_back.jpg
+{% endcapture %}
+{% include elements/carousel.html %}
 
 
 So lets see the specifications of the display , we can see into the main website of the waveshare about this -> 
