@@ -1,7 +1,7 @@
 ### Site Settings ###
 title               : MrP-CPU
 description         : >-
-                      Hey everyone
+                      Hey I am Prince, I am a tech enthusiast, coder, and cybersecurity student and just getting my hands on new technologies and learning techniques
 baseurl             : ""            # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
 rrepository: Mrp-cpu/Mrp-cpu.github.io
     # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
