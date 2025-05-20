@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+
+<!--
+  portfolYOU Jekyll theme by yousinix
+  Free for personal and commercial use under the MIT license
+  https://github.com/yousinix/portfolYOU
+-->
+
+<html lang="en" class="h-100">
+
+<head>
+
+  
+  
+  
+
+  
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Solidity   eat the blocks">
+  <meta property="og:description" content="Hey I am Prince, I am a tech enthusiast, coder, and cybersecurity student and just getting my hands on new technologies and learning techniques">
+  <meta property="og:image" content="https://raw.githubusercontent.com//MrP-cpu/Mrp-cpu.github.io/main/assets/image.jpg">
+
+  <title>Solidity   eat the blocks</title>
+  <meta name="description" content="Hey I am Prince, I am a tech enthusiast, coder, and cybersecurity student and just getting my hands on new technologies and learning techniques">
+
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
+
+  <!-- Theme style -->
+  <script src="/assets/js/theme.js"></script>
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+
+  <!-- Animate CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+
+<body class="h-100 d-flex flex-column">
+
+  <main class="flex-shrink-0 container mt-5">
+    <nav class="navbar navbar-expand-lg navbar-themed">
+
+  <a class="navbar-brand" href="/"><h5><b>MrP-CPU</b></h5></a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fas fa-1x fa-bars text-themed"></i>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav ml-auto"><a class="nav-item nav-link " href="/projects/">Projects</a>
+
+      <a class="nav-item nav-link active" href="/blog/">Blog</a>
+
+      <a class="nav-item nav-link " href="/about/">About</a>
+
+      
+
+      <span id="theme-toggler" class="nav-item nav-link" role="button" onclick="toggleTheme()"></span>
+    </div>
+  </div>
+
+</nav>
+    <div class="col-lg-10 mx-auto mt-5 markdown-body">
+  <h1><b>Solidity   eat the blocks</b></h1>
+
+<p class="post-metadata text-muted">
+  15 May 2025 -  
+  <b>8 mins read time</b>
+
+  <br></p>
+
+
+<pre><code class="language-sol">// SPDX-License-Identifier: MIT
+
+pragma solidity ;
+
+  
+  
+
+// for general layout of solidity
+
+contract MyContract {
+unit a ;
+unit b ;
+function add() external {
+return a + b ;
+}  
+}
+</code></pre>
+
+<hr />
+<h2 id="about-variables--">about Variables -&gt;</h2>
+
+<div class="language-solidity highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// SPDX-License-Identifier: MIT
+</span><span class="k">pragma</span> <span class="n">solidity</span> <span class="o">&gt;=</span><span class="mf">0.7</span><span class="p">.</span><span class="mi">0</span> <span class="o">&lt;</span><span class="mf">0.9</span><span class="p">.</span><span class="mi">0</span><span class="p">;</span>
+
+<span class="c1">// for general layout of solidity
+</span>
+<span class="k">contract</span> <span class="n">MyContract</span> <span class="p">{</span>
+	
+	<span class="c1">// 1. fixed size types
+</span>	
+	<span class="kt">bool</span> <span class="n">isReady</span><span class="p">;</span>
+	<span class="kt">uint</span> <span class="n">a</span><span class="p">;</span> <span class="c1">// unsigned integer -&gt; for transactions and all
+</span>	<span class="kt">address</span> <span class="n">recipent</span><span class="p">;</span>	
+	<span class="kt">bytes32</span> <span class="n">data</span><span class="p">;</span> <span class="c1">// used to represent strings
+</span>
+	
+	<span class="c1">// 2. variable size types 0-&gt; for variable memory
+</span>	<span class="kt">string</span> <span class="n">name</span><span class="p">;</span> <span class="c1">//can be of anylength
+</span>	<span class="kt">bytes</span> <span class="n">_data</span><span class="p">;</span> <span class="c1">//this doesnt have defined length	
+</span>	<span class="kt">uint</span><span class="p">[]</span> <span class="n">amounts</span><span class="p">;</span>
+	<span class="k">mapping</span><span class="p">(</span><span class="kt">uint</span> <span class="o">=&gt;</span> <span class="kt">string</span><span class="p">)</span> <span class="n">users</span><span class="p">;</span>
+
+  
+
+<span class="c1">// 3. user defined data
+</span>	<span class="k">struct</span> <span class="n">User</span> <span class="p">{</span>
+		<span class="kt">uint</span> <span class="n">id</span><span class="p">;</span>
+		<span class="kt">string</span> <span class="n">name</span><span class="p">;</span>
+		<span class="kt">uint</span><span class="p">[]</span> <span class="n">friends</span><span class="p">;</span>
+<span class="p">}</span>
+
+	<span class="k">enum</span> <span class="n">Color</span> <span class="p">{</span>
+		<span class="n">RED</span><span class="p">,</span>
+		<span class="n">GREEN</span><span class="p">,</span>
+		<span class="n">BLUE</span>
+		<span class="p">}</span><span class="c1">// FOR LABELIING OF THE
+</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="functions-in-solidity">functions in Solidity</h3>
+
+<div class="language-solidity highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// SPDX-License-Identifier: MIT
+</span>
+<span class="k">pragma</span> <span class="n">solidity</span> <span class="o">&gt;=</span><span class="mf">0.7</span><span class="p">.</span><span class="mi">0</span> <span class="o">&lt;</span><span class="mf">0.9</span><span class="p">.</span><span class="mi">0</span><span class="p">;</span>
+
+<span class="c1">// for general layout of solidity
+</span>
+<span class="k">contract</span> <span class="n">MyContract</span><span class="p">{</span>
+	<span class="kt">uint</span> <span class="n">value</span><span class="p">;</span>
+	<span class="k">function</span> <span class="n">getValue</span><span class="p">()</span> <span class="k">external</span> <span class="k">view</span> <span class="k">returns</span><span class="p">(</span><span class="kt">uint</span><span class="p">)</span>
+		<span class="p">{</span>
+		<span class="k">return</span> <span class="n">value</span><span class="p">;</span>
+		<span class="p">}</span>
+
+<span class="c1">//to change value variable inside blockchain
+</span>
+	<span class="k">function</span> <span class="n">setValue</span><span class="p">(</span><span class="kt">uint</span> <span class="n">_value</span><span class="p">)</span> <span class="k">external</span>
+		<span class="p">{</span> 
+		<span class="cm">/*we removed view keyword so that we could change the value
+		value = _value;
+		}
+
+}
+</span></code></pre></div></div>
+
+<h3 id="interacting-with-a-smart-contract-with-remix">Interacting with a Smart Contract with Remix</h3>
+
+<p>![[Pasted image 20250121112344.png]]</p>
+
+<p>![[Pasted image 20250121112523.png]]</p>
+
+<p>– after updating the value we could also getValue of the setValue</p>
+
+<p>![[Pasted image 20250121112613.png]]</p>
+
+<h3 id="function-modifier-keywords-view-pure-constant">Function modifier keywords (view, pure, constant)</h3>
+
+<p>![[Pasted image 20250121112729.png]] 
+if you have set variable to view then you could’nt modify the variable value so thats why we are recieving an error</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">view</code> keyword makes the function as readonly</li>
+</ul>
+
+<p>API’s to interact with smart contracts</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">eth_pure</code></li>
+  <li><code class="language-plaintext highlighter-rouge">eth_send</code></li>
+</ul>
+
+<h3 id="function-visibility-external-public-internal--private"> Function visibility (external, public, internal &amp; private)</h3>
+
+<ol>
+  <li>Private
+![[Pasted image 20250122191906.png]]</li>
+</ol>
+
+<p>How to decide which is best for you ?</p>
+<ul>
+  <li>you can’t use public keyword for every function as , i could create a vulnerablilty insie the smart contract</li>
+</ul>
+
+<ol>
+  <li>External
+![[Pasted image 20250122192144.png]]</li>
+</ol>
+
+<h3 id="variable-visibility-private-internal--public">Variable Visibility (private, internal &amp; public)</h3>
+
+<div class="language-solidity highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// SPDX-License-Identifier: MIT
+</span><span class="k">pragma</span> <span class="n">solidity</span> <span class="o">&gt;=</span><span class="mf">0.7</span><span class="p">.</span><span class="mi">0</span> <span class="o">&lt;</span><span class="mf">0.9</span><span class="p">.</span><span class="mi">0</span><span class="p">;</span>
+
+<span class="k">contract</span> <span class="n">MyContract</span> <span class="p">{</span>
+
+	<span class="kt">uint</span> <span class="k">private</span> <span class="n">a</span><span class="p">;</span>
+	<span class="k">function</span> <span class="n">foo</span><span class="p">()</span> <span class="k">external</span> <span class="p">{</span>
+		<span class="kt">uint</span> <span class="n">b</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>visiblilty can be decided when you give the least privelege to the variable</li>
+</ul>
+
+<p>even we havent declared any function a still its givving errors</p>
+
+<p>![[Pasted image 20250122194121.png]]</p>
+
+<h3 id="built-in-variables-msgsender-msgvalue">Built-in Variables (msg.sender, msg.value…)</h3>
+
+<ul>
+  <li>you can get the information about your environment</li>
+</ul>
+
+<div class="language-solidity highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  
+<span class="k">contract</span> <span class="n">MyContract</span><span class="p">{</span>
+
+<span class="c1">//tx
+</span>	<span class="n">tx</span><span class="p">.</span><span class="n">origin</span>
+
+<span class="c1">//msg
+</span>	<span class="n">msg</span><span class="p">.</span><span class="n">value</span>
+	<span class="n">msg</span><span class="p">.</span><span class="n">sender</span>
+
+  
+
+	<span class="n">Alice</span> <span class="o">=&gt;</span> <span class="n">Smart</span> <span class="k">contract</span> <span class="n">A</span> <span class="o">=&gt;</span> <span class="n">Smart</span> <span class="k">contract</span> <span class="n">B</span> <span class="o">=&gt;</span> <span class="n">C</span>
+			 <span class="n">tx</span><span class="p">.</span><span class="n">origin</span><span class="o">=</span><span class="n">Alice</span> <span class="n">tx</span><span class="p">.</span><span class="n">origin</span><span class="o">=</span><span class="n">Alice</span>
+			 <span class="n">msg</span><span class="p">.</span><span class="n">sender</span><span class="o">=</span><span class="n">Alice</span> <span class="n">msg</span><span class="p">.</span><span class="n">sender</span><span class="o">=</span><span class="n">Smart</span> <span class="k">contract</span> <span class="n">A</span>
+
+<span class="c1">//block added during mining process
+</span>	<span class="n">block</span><span class="p">.</span><span class="n">timestamp</span> <span class="o">/</span> <span class="nb">now</span> <span class="o">=&gt;</span> <span class="mi">1970</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="control-structures-if--for-loop--while">control structures (if , for loop , while)</h3>
+
+<div class="language-solidity highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="k">contract</span> <span class="n">MyContract</span> <span class="p">{</span>
+	<span class="k">function</span> <span class="n">foo</span><span class="p">()</span> <span class="k">external</span> <span class="p">{</span>
+		<span class="k">if</span><span class="p">(</span><span class="o">!</span> <span class="n">boolValue</span><span class="p">){</span>
+		<span class="p">}</span><span class="k">else</span><span class="p">{</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<pre><code class="language-sol">contract MyContract {
+	function foo() external {
+		if(! boolValue){
+		}else{
+		}
+	}
+}
+</code></pre>
+
+<h3 id="arrays-declare--read--update--delete">Arrays (Declare , Read , Update , Delete)</h3>
+
+<div class="language-solidity highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// SPDX-License-Identifier: MIT
+</span><span class="k">pragma</span> <span class="n">solidity</span> <span class="o">^</span><span class="mf">0.5</span><span class="p">.</span><span class="mi">17</span><span class="p">;</span>
+
+<span class="k">contract</span> <span class="n">MyContract</span><span class="p">{</span>
+    <span class="cm">/*1 storing arrays 
+     2. memory arrays 
+     3. arrasys arguments and returns arrays from the functions 
+
+     */</span>
+
+     <span class="kt">uint</span><span class="p">[]</span> <span class="n">myArray</span><span class="p">;</span>
+
+     <span class="k">function</span> <span class="n">food</span><span class="p">()</span> <span class="k">external</span> <span class="p">{</span>
+        <span class="n">myArray</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+        <span class="n">myArray</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+
+<span class="c1">//reading element
+</span>        <span class="n">myArray</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+        <span class="n">myArray</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+
+<span class="c1">//updating the values
+</span>        <span class="n">myArray</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="mi">20</span><span class="p">;</span>
+
+<span class="c1">//deleting the values ; just reset the values to the zero
+</span>        <span class="k">delete</span> <span class="n">myArray</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+        
+     <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="mappings">Mappings</h3>
+<p>In <strong>Solidity</strong>, a <strong>mapping</strong> is a reference type that acts like a <strong>hash table or dictionary</strong>. It allows you to associate <strong>key-value pairs</strong>, where each key maps to a corresponding value. Mappings are widely used in smart contracts for storing structured data like user balances, ownership records, permissions, etc</p>
+
+<div class="language-solidity highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">pragma</span> <span class="n">solidity</span> <span class="o">^</span><span class="mf">0.5</span><span class="p">.</span><span class="mi">11</span><span class="p">;</span>
+<span class="k">contract</span> <span class="n">MyContract</span> <span class="p">{</span>
+	<span class="cm">/*1. declare mappings
+	2. C.R.U.D
+	3 Default values
+	3. Exotic mapping 1: nested mappings
+	4. Exotic mapping 2: array inside mapping*/</span>
+	<span class="p">{</span>	
+	<span class="n">a</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+	<span class="n">b</span><span class="o">:</span> <span class="mi">2</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<div class="language-solidity highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">mapping</span><span class="p">(</span><span class="n">keyType</span> <span class="o">=&gt;</span> <span class="n">valueType</span><span class="p">)</span> <span class="n">visibility</span> <span class="n">variableName</span><span class="p">;</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">keyType</code>: Can be any built-in value type (like <code class="language-plaintext highlighter-rouge">address</code>, <code class="language-plaintext highlighter-rouge">uint</code>, <code class="language-plaintext highlighter-rouge">bytes32</code>, etc.), but <strong>not</strong> a complex type like another mapping or struct.</li>
+  <li><code class="language-plaintext highlighter-rouge">valueType</code>: Can be any type, including other mappings or structs.</li>
+</ul>
+
+<div class="language-solidity highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// SPDX-License-Identifier: MIT
+</span><span class="k">pragma</span> <span class="n">solidity</span> <span class="o">^</span><span class="mf">0.5</span><span class="p">.</span><span class="mi">17</span><span class="p">;</span>
+
+<span class="k">contract</span> <span class="n">MyContract</span> <span class="p">{</span>
+    <span class="c1">// 1. Declare mappings
+</span>    <span class="k">mapping</span><span class="p">(</span><span class="kt">address</span> <span class="o">=&gt;</span> <span class="kt">uint</span><span class="p">)</span> <span class="n">balances</span><span class="p">;</span>
+    <span class="k">mapping</span><span class="p">(</span><span class="kt">address</span> <span class="o">=&gt;</span> <span class="k">mapping</span><span class="p">(</span><span class="kt">address</span> <span class="o">=&gt;</span> <span class="kt">bool</span><span class="p">))</span> <span class="k">public</span> <span class="n">isFriend</span><span class="p">;</span>
+
+    <span class="k">function</span> <span class="n">foo</span><span class="p">(</span><span class="kt">address</span> <span class="n">someAddressThatDoesNotExist</span><span class="p">)</span> <span class="k">external</span> <span class="p">{</span>
+        <span class="c1">// 2. Add / Write
+</span>        <span class="n">balances</span><span class="p">[</span><span class="n">msg</span><span class="p">.</span><span class="n">sender</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
+
+        <span class="c1">// 2. Read (use variable to demonstrate)
+</span>        <span class="kt">uint</span> <span class="n">myBalance</span> <span class="o">=</span> <span class="n">balances</span><span class="p">[</span><span class="n">msg</span><span class="p">.</span><span class="n">sender</span><span class="p">];</span>
+
+        <span class="c1">// 2. Update
+</span>        <span class="n">balances</span><span class="p">[</span><span class="n">msg</span><span class="p">.</span><span class="n">sender</span><span class="p">]</span> <span class="o">=</span> <span class="mi">200</span><span class="p">;</span>
+
+        <span class="c1">// 2. Delete
+</span>        <span class="k">delete</span> <span class="n">balances</span><span class="p">[</span><span class="n">msg</span><span class="p">.</span><span class="n">sender</span><span class="p">];</span>
+
+        <span class="c1">// 3. Default value (returns 0 if the address doesn't exist)
+</span>        <span class="kt">uint</span> <span class="n">defaultValue</span> <span class="o">=</span> <span class="n">balances</span><span class="p">[</span><span class="n">someAddressThatDoesNotExist</span><span class="p">];</span>  <span class="c1">// = 0
+</span>
+        <span class="c1">// 4. Exotic mapping example - nested mapping usage
+</span>        <span class="n">isFriend</span><span class="p">[</span><span class="n">msg</span><span class="p">.</span><span class="n">sender</span><span class="p">][</span><span class="n">someAddressThatDoesNotExist</span><span class="p">]</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="structs">Structs</h3>
+
+<p>In <strong>Solidity</strong>, a <strong>struct</strong> is a <strong>custom data type</strong> that lets you group multiple variables into a single, logical unit. Structs are useful for organizing and managing related data.</p>
+
+<hr />
+
+<p>Why Use Structs?
+Structs help manage <strong>complex data</strong> by combining related properties. For example, instead of storing names, ages, and addresses in separate mappings, you can combine them in a single struct called <code class="language-plaintext highlighter-rouge">Person</code></p>
+
+<h4 id="where-can-structs-be-used">Where Can Structs Be Used?</h4>
+
+<ul>
+  <li>Inside mappings</li>
+  <li>Inside arrays</li>
+  <li>As function parameters and return types</li>
+  <li>Inside other structs (nested structs)</li>
+</ul>
+
+<ol>
+  <li>Declare struct</li>
+  <li>create read update and delete</li>
+  <li>array of struct</li>
+  <li>mapping of struct</li>
+</ol>
+
+<div class="language-solidity highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">struct</span> <span class="n">StructName</span> <span class="p">{</span>
+    <span class="n">dataType1</span> <span class="n">property1</span><span class="p">;</span>
+    <span class="n">dataType2</span> <span class="n">property2</span><span class="p">;</span>
+    <span class="p">...</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-solidity highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// SPDX-License-Identifier: MIT
+</span><span class="k">pragma</span> <span class="n">solidity</span> <span class="o">^</span><span class="mf">0.8</span><span class="p">.</span><span class="mi">0</span><span class="p">;</span>
+
+<span class="k">contract</span> <span class="n">MyContract</span> <span class="p">{</span>
+    <span class="c1">// Define a struct
+</span>    <span class="k">struct</span> <span class="n">Person</span> <span class="p">{</span>
+        <span class="kt">string</span> <span class="n">name</span><span class="p">;</span>
+        <span class="kt">uint</span> <span class="n">age</span><span class="p">;</span>
+        <span class="kt">address</span> <span class="n">wallet</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Use struct in a mapping
+</span>    <span class="k">mapping</span><span class="p">(</span><span class="kt">address</span> <span class="o">=&gt;</span> <span class="n">Person</span><span class="p">)</span> <span class="k">public</span> <span class="n">people</span><span class="p">;</span>
+
+    <span class="k">function</span> <span class="n">addPerson</span><span class="p">(</span><span class="kt">string</span> <span class="k">memory</span> <span class="n">_name</span><span class="p">,</span> <span class="kt">uint</span> <span class="n">_age</span><span class="p">)</span> <span class="k">public</span> <span class="p">{</span>
+        <span class="n">people</span><span class="p">[</span><span class="n">msg</span><span class="p">.</span><span class="n">sender</span><span class="p">]</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="n">_name</span><span class="p">,</span> <span class="n">_age</span><span class="p">,</span> <span class="n">msg</span><span class="p">.</span><span class="n">sender</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">function</span> <span class="n">getPerson</span><span class="p">()</span> <span class="k">public</span> <span class="k">view</span> <span class="k">returns</span> <span class="p">(</span><span class="kt">string</span> <span class="k">memory</span><span class="p">,</span> <span class="kt">uint</span><span class="p">,</span> <span class="kt">address</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Person</span> <span class="k">memory</span> <span class="n">p</span> <span class="o">=</span> <span class="n">people</span><span class="p">[</span><span class="n">msg</span><span class="p">.</span><span class="n">sender</span><span class="p">];</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">name</span><span class="p">,</span> <span class="n">p</span><span class="p">.</span><span class="n">age</span><span class="p">,</span> <span class="n">p</span><span class="p">.</span><span class="n">wallet</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+
+
+</div>
+  </main>
+  <footer class="mt-auto py-3 text-center">
+
+  <small class="text-muted mb-2">
+    <i class="fas fa-code"></i> with <i class="fas fa-heart"></i>
+    by <strong>MrP</strong>
+  </small>
+
+  <div class="container-fluid justify-content-center"><a class="social mx-1"  href="https://www.github.com/Mrp-cpu"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#333333'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-github fa-1x"></i>
+    </a>
+
+</div><small id="attribution">
+    theme <a href="https://github.com/yousinix/portfolYOU">portfolYOU</a>
+  </small>
+
+</footer>
+
+  
+  <!-- GitHub Buttons -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper.js CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+<!-- Bootstrap JS CDN -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- wow.js CDN & Activation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+<script> new WOW().init(); </script>
+
+<!-- Initialize all tooltips -->
+<script>
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+</body>
+
+</html>
